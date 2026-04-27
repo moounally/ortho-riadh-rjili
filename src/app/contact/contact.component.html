@@ -1,0 +1,79 @@
+<div class="flex">
+    <div class="flex-1 p-3 flex flex-col gap-3 items-center">
+        <div class="flex flex-col items-center gap-2">
+            <span class="text-5xl text-[#0077b6]">Contactez votre orthodontiste à Medenine</span>
+            <span class="text-lg text-justify">Besoin d’un orthodontiste à Medenine ? Dr. Riadh Rjili vous
+                accompagne dans vos traitements orthodontiques
+                avec expertise et soin. Remplissez le formulaire ci-dessous pour toute question ou pour fixer un
+                rendez-vous, ou
+                contactez-nous directement par téléphone ou email.</span>
+        </div>
+        <form class="flex flex-col p-2 gap-4 w-3/4">
+            <div class="flex flex-col gap-2 items-start w-full">
+                <div class="input-floating w-full">
+                    <input placeholder="" class="input" required />
+                    <label class="input-floating-label" for="">Nom</label>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2 items-start w-full">
+                <div class="input-floating w-full">
+                    <input placeholder="" class="input" required />
+                    <label class="input-floating-label" for="">Prénom</label>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2 items-start w-full">
+                <div class="input-floating w-full">
+                    <input placeholder="" class="input" required />
+                    <label class="input-floating-label" for="">Télephone</label>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2 items-start w-full">
+                <div class="input-floating w-full">
+                    <input placeholder="" class="input" />
+                    <label class="input-floating-label" for="">Email</label>
+                </div>
+            </div>
+
+            <div class="textarea-floating">
+                <textarea class="textarea" placeholder="" id="textareaFloating"></textarea>
+                <label class="textarea-floating-label" for="textareaFloating">Message</label>
+            </div>
+
+            <div class="input-floating">
+                <input type="text" placeholder="YYYY-MM-DD" class="input" id="flatpickr-floating" />
+                <label class="input-floating-label" for="flatpickr-floating">Date</label>
+            </div>
+
+            <div class="select-floating">
+                <select class="select select-md" id="selectFloatingExtraLarge" aria-label="floating label">
+                    <option disabled selected>-- Choisir une heure --</option>
+                    <option value="08:00">08:00</option>
+                    <option value="08:30">08:30</option>
+                    <option value="09:00">09:00</option>
+                    <option value="09:30">09:30</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">14:00</option>
+                    <option value="12:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">16:00</option>
+                    <option value="17:30">16:30</option>
+                </select>
+                <label class="select-floating-label" for="selectFloatingExtraLarge"></label>
+            </div>
+
+            <button class="btn btn-primary bg-[#0077b6]" type="submit">Envoyer</button>
+        </form>
+    </div>
+    <div class="flex-1"><img src="assets/contact/contact.jpg" alt=""></div>
+</div>
+
+<contact-barre-component></contact-barre-component>

@@ -1,0 +1,27 @@
+<div class="w-full flex flex-col gap-10">
+    <div class="w-full flex justify-around">
+        <button class="w-1/3 flex justify-end cursor-pointer hover:underline" (click)="switchTab('child')">
+            <span> traitement enfants</span>
+        </button>
+        <button class="w-1/3 flex justify-center cursor-pointer hover:underline" (click)="switchTab('teenager')">
+            <span> traitement adolescents</span>
+        </button>
+        <button class="w-1/3 flex justify-baseline cursor-pointer hover:underline" (click)="switchTab('adult')">
+            <span> traitement adultes</span>
+        </button>
+    </div>
+    
+    <div class="w-full">
+        @switch (tab) {
+        @case ('child') {
+        <child-treatment-component></child-treatment-component>
+        }
+        @case ('teenager') {
+        <teenager-treatment-component></teenager-treatment-component>
+        }
+        @case ('adult') {
+        <adult-treatment-component></adult-treatment-component>
+        }
+        }
+    </div>
+</div>
