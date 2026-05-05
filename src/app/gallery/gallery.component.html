@@ -1,82 +1,101 @@
-<div class="w-full h-full flex flex-col items-center gap-10">
-    <div class="w-full" style="background-size: contain; background-repeat: no-repeat; background-position: center;">
-        <img src="assets/gallery/IMG_0475.jpg">
+<div class="w-full flex flex-col bg-brand-cream pb-20">
+    
+    <!-- Hero Header Galerie -->
+    <div class="relative w-full h-[50vh] flex items-center justify-center bg-brand-navy overflow-hidden">
+        <div class="absolute inset-0 w-full h-full">
+            <img src="assets/gallery/IMG_0475.jpg" class="w-full h-full object-cover opacity-40" alt="Galerie de sourires">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent"></div>
+        <div class="relative z-10 text-center px-6">
+            <span class="text-brand-gold uppercase tracking-[0.2em] font-semibold text-sm mb-4 block">Résultats</span>
+            <h1 class="text-5xl md:text-6xl font-bold text-white font-heading mb-4 drop-shadow-md">L'Art du Sourire</h1>
+            <p class="text-gray-200 text-lg md:text-xl font-light max-w-2xl mx-auto">
+                Découvrez la transformation de nos patients. L'excellence de notre cabinet en images.
+            </p>
+        </div>
     </div>
-    <div>
-        <span class="text-[#0077b6] font-medium text-2xl">Afin de visualiser les cas Avant - Après, tirez les flèches à gauche ou à droite</span>
+
+    <!-- Instructions -->
+    <div class="w-full text-center py-12 px-6">
+        <div class="inline-flex items-center gap-3 bg-white px-8 py-4 rounded-full shadow-md border border-gray-100">
+            <span class="icon-[lucide--sliders-horizontal] text-brand-gold text-2xl"></span>
+            <span class="text-brand-navy font-medium text-lg">Glissez les curseurs sur les images pour visualiser les résultats Avant - Après</span>
+        </div>
     </div>
-    <div class="w-full p-5 grid grid-cols-3 justify-items-center gap-10">
-        <div class="w-full">
+
+    <!-- Grille Avant/Après -->
+    <div class="w-full max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10">
+        <!-- Rendu dynamique via Angular for loop ou manuellement comme avant mais plus propre -->
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/1-1.jpg'" [right]="'assets/gallery/1-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/2-1.jpg'" [right]="'assets/gallery/2-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/3-1.jpg'" [right]="'assets/gallery/3-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/4-1.jpg'" [right]="'assets/gallery/4-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/5-1.jpg'" [right]="'assets/gallery/5-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/6-1.jpg'" [right]="'assets/gallery/6-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/7-1.jpg'" [right]="'assets/gallery/7-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/8-1.jpg'" [right]="'assets/gallery/8-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/9-1.jpg'" [right]="'assets/gallery/9-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/10-1.jpg'" [right]="'assets/gallery/10-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/11-1.jpg'" [right]="'assets/gallery/11-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/12-1.jpg'" [right]="'assets/gallery/12-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/13-1.jpg'" [right]="'assets/gallery/13-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/14-1.jpg'" [right]="'assets/gallery/14-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/15-1.jpg'" [right]="'assets/gallery/15-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/16-1.jpg'" [right]="'assets/gallery/16-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/17-1.jpg'" [right]="'assets/gallery/17-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/18-1.jpg'" [right]="'assets/gallery/18-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/19-1.jpg'" [right]="'assets/gallery/19-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/20-1.jpg'" [right]="'assets/gallery/20-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/21-1.jpg'" [right]="'assets/gallery/21-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/22-1.jpg'" [right]="'assets/gallery/22-2.jpg'" />
         </div>
-        <div class="w-full">
+        <div class="w-full rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border-4 border-white transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <diff-component [left]="'assets/gallery/23-1.jpg'" [right]="'assets/gallery/23-2.jpg'" />
         </div>
-        
     </div>
-    <contact-barre-component></contact-barre-component>
 </div>
+<contact-barre-component></contact-barre-component>
 

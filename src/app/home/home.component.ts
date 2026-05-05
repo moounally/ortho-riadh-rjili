@@ -2,12 +2,13 @@ import { Component, ElementRef, ViewChild } from "@angular/core";
 import { TreatmentComponent } from "./treatmentComponent/treatment.component";
 import { ContactBarreComponent } from "../components/contactBarreComponent/contactBarre.component";
 import { AvisComponent } from "./avisComponent/avis.component";
+import { RouterLink } from "@angular/router";
 
 @Component({
     selector : 'home-component',
     standalone : true,
     templateUrl : "./home.component.html",
-    imports: [TreatmentComponent, ContactBarreComponent, AvisComponent],
+    imports: [TreatmentComponent, ContactBarreComponent, AvisComponent, RouterLink],
 }
 )
 export class HomeComponent {

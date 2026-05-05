@@ -14,5 +14,8 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
     flatpickr('#flatpickr-floating', {});
   }
-}
 
+  onSubmit() {
+    
+  }
+}

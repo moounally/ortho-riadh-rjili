@@ -1,6 +1,151 @@
-<div class="flex flex-col items-center">
-    <img src="assets/qsts/qsts.jpg" />
-    <span></span>
+<div class="bg-brand-cream min-h-screen relative overflow-hidden">
+    
+    <!-- Decorative background elements -->
+    <div class="absolute top-20 -left-20 w-96 h-96 bg-brand-gold/5 rounded-full blur-[100px]"></div>
+    <div class="absolute bottom-20 -right-20 w-96 h-96 bg-brand-navy/5 rounded-full blur-[100px]"></div>
+
+    <!-- FAQ Hero -->
+    <div class="relative w-full h-[45vh] flex items-center justify-center bg-brand-navy overflow-hidden">
+        <div class="absolute inset-0 bg-[url('assets/qsts/qsts.jpg')] bg-cover bg-center opacity-20 scale-110"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-navy/80 via-brand-navy/60 to-brand-cream"></div>
+        
+        <div class="relative z-10 text-center px-6 mt-[-5vh]">
+            <div class="inline-flex items-center gap-3 bg-brand-gold/10 backdrop-blur-md px-4 py-2 rounded-full border border-brand-gold/20 mb-6">
+                <span class="icon-[ph--info-bold] text-brand-gold"></span>
+                <span class="text-brand-gold uppercase tracking-[0.3em] font-bold text-[10px]">Centre d'aide</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold text-white font-heading mb-6 drop-shadow-2xl">Questions Fréquentes</h1>
+            <p class="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                Tout ce que vous devez savoir pour aborder votre transformation avec sérénité et confiance.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ Content Section -->
+    <div class="max-w-5xl mx-auto px-6 -mt-16 relative z-20 pb-32">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            
+            <!-- Left: Sidebar Info -->
+            <div class="lg:col-span-1 space-y-8">
+                <div class="bg-white/80 backdrop-blur-xl p-8 rounded-[2.5rem] border border-white shadow-2xl shadow-brand-navy/5">
+                    <h3 class="text-2xl font-bold text-brand-navy font-heading mb-4">Besoin d'aide immédiate ?</h3>
+                    <p class="text-gray-500 font-light text-sm mb-8 leading-relaxed">
+                        Notre équipe est disponible pour répondre à toutes vos interrogations spécifiques par téléphone ou message.
+                    </p>
+                    <div class="space-y-4">
+                        <a href="tel:+21675603294" class="flex items-center gap-4 p-4 rounded-2xl bg-brand-cream hover:bg-brand-gold/10 transition-colors group">
+                            <div class="w-10 h-10 rounded-xl bg-brand-gold/20 flex items-center justify-center group-hover:bg-brand-gold transition-colors">
+                                <span class="icon-[ph--phone-call-bold] text-brand-gold group-hover:text-white"></span>
+                            </div>
+                            <span class="text-brand-navy font-semibold text-sm">+216 75 603 294</span>
+                        </a>
+                        <a href="https://wa.me/21655580320" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl bg-brand-cream hover:bg-brand-gold/10 transition-colors group">
+                            <div class="w-10 h-10 rounded-xl bg-brand-gold/20 flex items-center justify-center group-hover:bg-brand-gold transition-colors">
+                                <span class="icon-[ph--whatsapp-logo-bold] text-brand-gold group-hover:text-white"></span>
+                            </div>
+                            <span class="text-brand-navy font-semibold text-sm">WhatsApp Direct</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-brand-navy p-8 rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-gold/10 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+                    <h3 class="text-xl font-bold text-white font-heading mb-4 relative z-10">Prêt pour votre nouveau sourire ?</h3>
+                    <a routerLink="/contact" class="inline-flex items-center gap-2 text-brand-gold font-bold text-sm hover:gap-4 transition-all relative z-10">
+                        Prendre rendez-vous <span class="icon-[ph--arrow-right-bold]"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Accordion -->
+            <div class="lg:col-span-2 space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="group collapse collapse-plus bg-white rounded-[2rem] shadow-lg shadow-brand-navy/5 border border-gray-100 hover:border-brand-gold/30 transition-all duration-300">
+                    <input type="radio" name="faq-accordion" class="hidden" checked="checked" /> 
+                    <div class="collapse-title text-xl font-bold text-brand-navy font-heading p-8 flex items-center gap-4">
+                        <span class="w-8 h-8 rounded-lg bg-brand-cream flex items-center justify-center text-brand-gold text-sm font-bold group-hover:bg-brand-gold group-hover:text-white transition-colors">01</span>
+                        À quel âge faut-il consulter pour la première fois ?
+                    </div>
+                    <div class="collapse-content px-8 pb-8 text-gray-500 font-light leading-relaxed pl-20">
+                        <p>L'Association Tunisienne d'Orthodontie recommande une première consultation vers l'âge de 6-7 ans. À cet âge, il est souvent trop tôt pour un traitement complet, mais c'est le moment idéal pour détecter d'éventuels problèmes de croissance des mâchoires qui seront plus faciles à corriger précocement.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="group collapse collapse-plus bg-white rounded-[2rem] shadow-lg shadow-brand-navy/5 border border-gray-100 hover:border-brand-gold/30 transition-all duration-300">
+                    <input type="radio" name="faq-accordion" class="hidden" /> 
+                    <div class="collapse-title text-xl font-bold text-brand-navy font-heading p-8 flex items-center gap-4">
+                        <span class="w-8 h-8 rounded-lg bg-brand-cream flex items-center justify-center text-brand-gold text-sm font-bold group-hover:bg-brand-gold group-hover:text-white transition-colors">02</span>
+                        Combien de temps dure un traitement ?
+                    </div>
+                    <div class="collapse-content px-8 pb-8 text-gray-500 font-light leading-relaxed pl-20">
+                        <p>La durée varie selon la complexité du cas. En moyenne, un traitement dure entre 12 et 24 mois. Grâce aux nouvelles technologies comme Invisalign ou les brackets de dernière génération (Pitts 21), nous parvenons souvent à réduire ces délais.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="group collapse collapse-plus bg-white rounded-[2rem] shadow-lg shadow-brand-navy/5 border border-gray-100 hover:border-brand-gold/30 transition-all duration-300">
+                    <input type="radio" name="faq-accordion" class="hidden" /> 
+                    <div class="collapse-title text-xl font-bold text-brand-navy font-heading p-8 flex items-center gap-4">
+                        <span class="w-8 h-8 rounded-lg bg-brand-cream flex items-center justify-center text-brand-gold text-sm font-bold group-hover:bg-brand-gold group-hover:text-white transition-colors">03</span>
+                        Le traitement est-il douloureux ?
+                    </div>
+                    <div class="collapse-content px-8 pb-8 text-gray-500 font-light leading-relaxed pl-20">
+                        <p>L'orthodontie moderne a fait d'énormes progrès. On parle plus d'un léger inconfort passager (2-3 jours) après la pose ou l'activation. Nos systèmes autoligaturants exercent des forces très légères et physiologiques, minimisant toute sensation désagréable.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="group collapse collapse-plus bg-white rounded-[2rem] shadow-lg shadow-brand-navy/5 border border-gray-100 hover:border-brand-gold/30 transition-all duration-300">
+                    <input type="radio" name="faq-accordion" class="hidden" /> 
+                    <div class="collapse-title text-xl font-bold text-brand-navy font-heading p-8 flex items-center gap-4">
+                        <span class="w-8 h-8 rounded-lg bg-brand-cream flex items-center justify-center text-brand-gold text-sm font-bold group-hover:bg-brand-gold group-hover:text-white transition-colors">04</span>
+                        Invisalign est-il aussi efficace que les bagues ?
+                    </div>
+                    <div class="collapse-content px-8 pb-8 text-gray-500 font-light leading-relaxed pl-20">
+                        <p>Oui, pour la grande majorité des cas. La planification numérique permet un contrôle extrêmement précis du mouvement dentaire. C'est une solution esthétique, amovible et tout aussi performante pour retrouver un sourire parfait.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="group collapse collapse-plus bg-white rounded-[2rem] shadow-lg shadow-brand-navy/5 border border-gray-100 hover:border-brand-gold/30 transition-all duration-300">
+                    <input type="radio" name="faq-accordion" class="hidden" /> 
+                    <div class="collapse-title text-xl font-bold text-brand-navy font-heading p-8 flex items-center gap-4">
+                        <span class="w-8 h-8 rounded-lg bg-brand-cream flex items-center justify-center text-brand-gold text-sm font-bold group-hover:bg-brand-gold group-hover:text-white transition-colors">05</span>
+                        Quels sont les tarifs et facilités ?
+                    </div>
+                    <div class="collapse-content px-8 pb-8 text-gray-500 font-light leading-relaxed pl-20">
+                        <p>Le coût dépend de la technique choisie et de la durée. Nous proposons systématiquement des échéanciers de paiement personnalisés (paiement par mensualités) pour rendre l'excellence orthodontique accessible à tous.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- CALL TO ACTION BOTTOM -->
+        <div class="mt-32 relative">
+            <div class="bg-gradient-to-r from-brand-navy to-brand-navy-light p-12 md:p-20 rounded-[3rem] shadow-3xl text-center overflow-hidden">
+                <div class="absolute top-0 left-0 w-64 h-64 bg-brand-gold/5 rounded-full -ml-32 -mt-32"></div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-5xl font-bold text-white font-heading mb-8">Vous avez encore des doutes ?</h2>
+                    <p class="text-gray-300 text-lg mb-12 max-w-2xl mx-auto font-light">
+                        Chaque sourire est unique. Le mieux est d'en discuter de vive voix lors d'un bilan personnalisé au cabinet.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-6">
+                        <a routerLink="/contact" class="btn-primary-custom px-12 py-6 text-lg shadow-2xl shadow-brand-gold/20">
+                            <span class="icon-[ph--calendar-check-bold]"></span>
+                            Prendre mon rendez-vous
+                        </a>
+                        <a href="tel:+21675603294" class="btn-outline-custom border-white/20 text-white hover:bg-white hover:text-brand-navy px-12 py-6 text-lg">
+                            Nous appeler directement
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <contact-barre-component></contact-barre-component>

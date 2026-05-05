@@ -1,26 +1,35 @@
-<div class="flex w-full px-40">
-    <div class="w-1/2 px-25 justify-end"><img src="assets/accueil/child.jpg" alt=""></div>
-    <div class="w-1/2 justify-baseline flex flex-col px-25">
-        <span>6 à 8 ans</span>
-        <span>Traitement pour enfants</span>
-        <span>
-            Entre 6 et 8 ans, certains traitements peuvent
-            avoir un rôle préventif, notamment pour favoriser
-            le développement du palais. Ils peuvent être suivis
-            d’une phase d’interception, entre 8 et 11 ans,
-            ainsi que d’une période de suivi. Selon l’évolution dentaire,
-            un traitement complémentaire peut être envisagé à l’adolescence.</span>
-        <div>
-            <img src="assets/logos/tick.png" />
-            <span>Traitement préventif</span>
+<div class="flex flex-col md:flex-row w-full gap-12 items-center bg-white rounded-[2rem] p-8 md:p-12 shadow-xl shadow-brand-navy/5 border border-gray-100">
+    <div class="w-full md:w-1/2">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl group">
+            <img src="assets/accueil/child.jpg" alt="Orthodontie Enfant" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-navy/10"></div>
         </div>
-        <div>
-            <img src="assets/logos/tick.png" />
-            <span>Phase d'interception</span>
-        </div>
-        <div>
-            <img src="assets/logos/tick.png" />
-            <span>Suivi et traitement de l'adolescence</span>
+    </div>
+    <div class="w-full md:w-1/2 flex flex-col justify-center">
+        <span class="text-brand-gold uppercase tracking-[0.2em] font-semibold text-sm mb-2">Dès 6 à 8 ans</span>
+        <h3 class="text-3xl md:text-4xl font-bold text-brand-navy font-heading mb-6">Prévention & Interception</h3>
+        <p class="text-gray-600 mb-8 leading-relaxed font-light text-lg">
+            Garantissez un développement parfait dès le plus jeune âge. 
+            Entre 6 et 8 ans, nos traitements préventifs accompagnent la croissance de votre enfant pour éviter les complications futures. Une intervention douce au bon moment simplifie considérablement les traitements ultérieurs.
+        </p>
+        
+        <ul class="space-y-4">
+            <li class="flex items-center gap-4">
+                <span class="icon-[lucide--check-circle] text-brand-gold text-2xl shrink-0"></span>
+                <span class="text-brand-navy font-medium">Correction du développement des mâchoires</span>
+            </li>
+            <li class="flex items-center gap-4">
+                <span class="icon-[lucide--check-circle] text-brand-gold text-2xl shrink-0"></span>
+                <span class="text-brand-navy font-medium">Interception des mauvaises habitudes</span>
+            </li>
+            <li class="flex items-center gap-4">
+                <span class="icon-[lucide--check-circle] text-brand-gold text-2xl shrink-0"></span>
+                <span class="text-brand-navy font-medium">Préparation en douceur de la dentition définitive</span>
+            </li>
+        </ul>
+        
+        <div class="mt-10">
+            <a routerLink="/contact" class="btn-primary-custom inline-flex text-sm px-8 py-4">Prendre rendez-vous pour mon enfant</a>
         </div>
     </div>
 </div>

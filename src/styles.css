@@ -6,3 +6,38 @@
 @source "../node_modules/flyonui/dist/index.js"; /* Require only if you want to use FlyonUI JS component */
 @plugin "@iconify/tailwind4";
 @import "flyonui/src/vendor/flatpickr.css";
+
+@theme {
+  --color-brand-navy: #0B2545;
+  --color-brand-navy-light: #133D70;
+  --color-brand-gold: #D4AF37;
+  --color-brand-gold-hover: #C5A059;
+  --color-brand-cream: #FDFBF7;
+
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Playfair Display", ui-serif, Georgia, serif;
+
+  --animate-fade-in: fade-in 0.5s ease-out;
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@layer base {
+  html {
+    @apply font-sans text-gray-800 bg-brand-cream;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold text-brand-navy;
+  }
+}
+
+@layer components {
+  .btn-primary-custom {
+    @apply bg-brand-gold hover:bg-brand-gold-hover text-white font-semibold tracking-wide py-4 px-10 rounded-full transition-all duration-300 shadow-[0_8px_20px_rgba(212,175,55,0.3)] hover:shadow-[0_10px_25px_rgba(212,175,55,0.4)] hover:-translate-y-1 flex items-center justify-center gap-2 uppercase text-sm;
+  }
+  .btn-outline-custom {
+    @apply border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white font-semibold tracking-wide py-4 px-10 rounded-full transition-all duration-300 flex items-center justify-center gap-2 uppercase text-sm shadow-sm;
+  }
+}

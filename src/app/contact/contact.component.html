@@ -1,79 +1,138 @@
-<div class="flex">
-    <div class="flex-1 p-3 flex flex-col gap-3 items-center">
-        <div class="flex flex-col items-center gap-2">
-            <span class="text-5xl text-[#0077b6]">Contactez votre orthodontiste à Medenine</span>
-            <span class="text-lg text-justify">Besoin d’un orthodontiste à Medenine ? Dr. Riadh Rjili vous
-                accompagne dans vos traitements orthodontiques
-                avec expertise et soin. Remplissez le formulaire ci-dessous pour toute question ou pour fixer un
-                rendez-vous, ou
-                contactez-nous directement par téléphone ou email.</span>
+<div class="bg-brand-cream min-h-screen">
+    
+    <!-- Contact Hero Section -->
+    <div class="relative w-full h-[40vh] flex items-center justify-center bg-brand-navy overflow-hidden">
+        <div class="absolute inset-0 bg-[url('assets/accueil/why.jpg')] bg-cover bg-center opacity-30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent"></div>
+        <div class="relative z-10 text-center px-6">
+            <span class="text-brand-gold uppercase tracking-[0.2em] font-semibold text-sm mb-4 block">Contactez-nous</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-white font-heading mb-4 drop-shadow-md">Fixez votre rendez-vous</h1>
+            <p class="text-gray-200 text-lg md:text-xl font-light max-w-2xl mx-auto">
+                Le Dr. Riadh Rjili et son équipe sont à votre écoute pour transformer votre sourire.
+            </p>
         </div>
-        <form class="flex flex-col p-2 gap-4 w-3/4">
-            <div class="flex flex-col gap-2 items-start w-full">
-                <div class="input-floating w-full">
-                    <input placeholder="" class="input" required />
-                    <label class="input-floating-label" for="">Nom</label>
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-2 items-start w-full">
-                <div class="input-floating w-full">
-                    <input placeholder="" class="input" required />
-                    <label class="input-floating-label" for="">Prénom</label>
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-2 items-start w-full">
-                <div class="input-floating w-full">
-                    <input placeholder="" class="input" required />
-                    <label class="input-floating-label" for="">Télephone</label>
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-2 items-start w-full">
-                <div class="input-floating w-full">
-                    <input placeholder="" class="input" />
-                    <label class="input-floating-label" for="">Email</label>
-                </div>
-            </div>
-
-            <div class="textarea-floating">
-                <textarea class="textarea" placeholder="" id="textareaFloating"></textarea>
-                <label class="textarea-floating-label" for="textareaFloating">Message</label>
-            </div>
-
-            <div class="input-floating">
-                <input type="text" placeholder="YYYY-MM-DD" class="input" id="flatpickr-floating" />
-                <label class="input-floating-label" for="flatpickr-floating">Date</label>
-            </div>
-
-            <div class="select-floating">
-                <select class="select select-md" id="selectFloatingExtraLarge" aria-label="floating label">
-                    <option disabled selected>-- Choisir une heure --</option>
-                    <option value="08:00">08:00</option>
-                    <option value="08:30">08:30</option>
-                    <option value="09:00">09:00</option>
-                    <option value="09:30">09:30</option>
-                    <option value="10:00">10:00</option>
-                    <option value="10:30">10:30</option>
-                    <option value="11:00">11:00</option>
-                    <option value="11:30">11:30</option>
-                    <option value="12:00">14:00</option>
-                    <option value="12:30">14:30</option>
-                    <option value="15:00">15:00</option>
-                    <option value="15:30">15:30</option>
-                    <option value="16:00">16:00</option>
-                    <option value="16:30">16:30</option>
-                    <option value="17:00">16:00</option>
-                    <option value="17:30">16:30</option>
-                </select>
-                <label class="select-floating-label" for="selectFloatingExtraLarge"></label>
-            </div>
-
-            <button class="btn btn-primary bg-[#0077b6]" type="submit">Envoyer</button>
-        </form>
     </div>
-    <div class="flex-1"><img src="assets/contact/contact.jpg" alt=""></div>
+
+    <div class="max-w-7xl mx-auto px-6 -mt-20 relative z-20 pb-24">
+        <div class="flex flex-col lg:flex-row gap-8 bg-white rounded-[2rem] shadow-2xl shadow-brand-navy/10 overflow-hidden border border-gray-100">
+            
+            <!-- Left Side: Form -->
+            <div class="flex-1 p-8 md:p-14">
+                <div class="mb-10">
+                    <h2 class="text-3xl font-bold text-brand-navy font-heading mb-4">Envoyez-nous un message</h2>
+                    <p class="text-gray-500 font-light leading-relaxed">
+                        Besoin d'un renseignement ou d'une première consultation ? Remplissez ce formulaire et nous vous recontacterons dans les plus brefs délais.
+                    </p>
+                </div>
+
+                <form class="flex flex-col gap-8" (ngSubmit)="onSubmit()">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="relative group">
+                            <input type="text" id="nom" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Nom" required>
+                            <label for="nom" class="absolute left-0 -top-4 text-xs text-gray-400 uppercase tracking-wider transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold">Nom</label>
+                        </div>
+                        <div class="relative group">
+                            <input type="text" id="prenom" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Prénom" required>
+                            <label for="prenom" class="absolute left-0 -top-4 text-xs text-gray-400 uppercase tracking-wider transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold">Prénom</label>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="relative group">
+                            <input type="tel" id="tel" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Téléphone" required>
+                            <label for="tel" class="absolute left-0 -top-4 text-xs text-gray-400 uppercase tracking-wider transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold">Téléphone</label>
+                        </div>
+                        <div class="relative group">
+                            <input type="email" id="email" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Email (Optionnel)">
+                            <label for="email" class="absolute left-0 -top-4 text-xs text-gray-400 uppercase tracking-wider transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold">Email (Optionnel)</label>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="relative group">
+                            <input type="date" id="date" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Date souhaitée">
+                            <label for="date" class="absolute left-0 -top-4 text-xs text-gray-400 uppercase tracking-wider transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold">Date souhaitée</label>
+                        </div>
+                        <div class="relative group">
+                            <select id="periode" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer">
+                                <option value="" disabled selected>Choisissez une période</option>
+                                <option value="matin">Matin (08:00 - 12:00)</option>
+                                <option value="apresmidi">Après-midi (14:00 - 18:00)</option>
+                            </select>
+                            <label for="periode" class="absolute left-0 -top-4 text-xs text-gray-400 uppercase tracking-wider">Période souhaitée</label>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <textarea id="message" rows="3" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Votre message"></textarea>
+                        <label for="message" class="absolute left-0 -top-4 text-xs text-gray-400 uppercase tracking-wider transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold">Votre message ou motif de consultation</label>
+                    </div>
+
+                    <button class="btn-primary-custom py-5 px-12 self-start flex items-center gap-3 text-lg" type="submit">
+                        <span class="icon-[lucide--send]"></span>
+                        Envoyer ma demande
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right Side: Info & Maps -->
+            <div class="w-full lg:w-[400px] bg-brand-navy p-10 md:p-14 flex flex-col">
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-white font-heading mb-8">Nos Coordonnées</h3>
+                    
+                    <div class="flex flex-col gap-8">
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center shrink-0 border border-white/10">
+                                <span class="icon-[lucide--map-pin] text-brand-gold text-2xl"></span>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-gold font-semibold uppercase tracking-widest text-xs mb-1">Localisation</h4>
+                                <p class="text-white text-sm font-light leading-relaxed">Immeuble Kourchid Centre, 1er étage, Place de la Liberté, Médenine 4100</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center shrink-0 border border-white/10">
+                                <span class="icon-[lucide--phone] text-brand-gold text-2xl"></span>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-gold font-semibold uppercase tracking-widest text-xs mb-1">Téléphone</h4>
+                                <p class="text-white text-sm font-light">+216 75 603 294</p>
+                                <p class="text-white/60 text-xs mt-1">Urgences: +216 55 580 320</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center shrink-0 border border-white/10">
+                                <span class="icon-[lucide--mail] text-brand-gold text-2xl"></span>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-gold font-semibold uppercase tracking-widest text-xs mb-1">Email</h4>
+                                <p class="text-white text-sm font-light">rjiliorthodontics&#64;gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-auto pt-8 border-t border-white/10">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl relative group h-[200px]">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Cabinet+Orthodontie+Dr+Riadh+Rjili+Medenine&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            class="absolute inset-0 w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700"
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                        <div class="absolute inset-0 bg-brand-navy/20 group-hover:bg-transparent transition-all pointer-events-none"></div>
+                        <a href="https://maps.app.goo.gl/mVHw3r2QY6EJUzHSA" target="_blank" class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-brand-gold text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transform scale-0 group-hover:scale-100 transition-all duration-300">Voir sur Maps</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 </div>
 
 <contact-barre-component></contact-barre-component>

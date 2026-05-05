@@ -1,62 +1,98 @@
-<div class="bg-[#26b3ff] w-full flex flex-col p-4">
-    <div class="w-full flex justify-around">
-        <div class="text-white decoration-0 flex-2 justify-center flex flex-col items-center">
-            <img src="assets/logos/logo001 - Copy.png" alt="image" class="w-4/5"><br>
-            <span class="text-lg">Alignez votre sourire, révélez votre confiance</span>
+<div class="bg-brand-navy w-full flex flex-col p-12 lg:p-16 border-t border-white/10">
+    <div class="w-full flex flex-col md:flex-row flex-wrap justify-between gap-12 max-w-7xl mx-auto">
+        <!-- Logo et Slogan -->
+        <div class="text-white flex flex-col items-center md:items-start flex-1 min-w-[250px]">
+            <img src="assets/logos/logo001 - Copy.png" alt="Cabinet Dr Riadh Rjili" class="w-48 mb-6 brightness-0 invert">
+            <p class="text-brand-gold font-light tracking-wide text-lg text-center md:text-left font-heading italic">
+                "Alignez votre sourire, révélez votre confiance"
+            </p>
         </div>
-        <div class="text-white flex flex-col decoration-0 flex-1 gap-2">
-            <span class="text-3xl">contact</span>
-            <div class="flex items-center gap-1">
-                <span class="icon-[mdi--cellphone-basic]"></span>
-                <span>(+216) 55 580 320</span>
-            </div>
-
-            <div class="flex items-center gap-1">
-                <span class="icon-[mdi--phone-classic]"></span>
-                <span>75 603 294</span>
-            </div>
-
-            <div class="flex items-center gap-1">
-                <span class="icon-[mdi--gmail]"></span>
-                <span>rjiliorthodontics&#64;gmail.com</span>
-            </div>
-
-            <div class="flex items-center gap-1">
-                <span class="icon-[mdi--location]"></span>
+        
+        <!-- Contact -->
+        <div class="text-white flex flex-col flex-1 min-w-[250px] gap-4">
+            <h3 class="text-2xl font-heading font-semibold text-brand-gold mb-2">Contact</h3>
+            
+            <div class="flex items-start gap-3">
+                <span class="icon-[mdi--phone-classic] text-brand-gold text-2xl mt-1"></span>
                 <div class="flex flex-col">
-                    <span>Immeuble Kourchid Centre, 1er étage,</span>
-                    <span>Bureau N°3, Place de la Liberté, 4100 Médenine</span>
+                    <span class="font-light">+216 75 603 294</span>
+                    <span class="text-sm text-gray-400">Urgences: +216 55 580 320</span>
                 </div>
             </div>
 
-            <div class="text-4xl flex gap-4">
-                <a href="https://www.facebook.com/profile.php?id=61574279796587"><span
-                        class="icon-[fa7-brands--facebook]"></span></a>
-                <a href="https://www.instagram.com/dr.riadh.rjili/"><span
-                        class="icon-[fa7-brands--instagram]"></span></a>
-                <a href="https://www.tiktok.com/@riadh.rjili"><span class="icon-[fa7-brands--tiktok]"></span></a>
+            <div class="flex items-center gap-3">
+                <span class="icon-[mdi--gmail] text-brand-gold text-2xl"></span>
+                <a href="mailto:rjiliorthodontics&#64;gmail.com" class="font-light hover:text-brand-gold transition-colors">rjiliorthodontics&#64;gmail.com</a>
+            </div>
+
+            <div class="flex items-start gap-3 group">
+                <span class="icon-[mdi--location] text-brand-gold text-2xl mt-1"></span>
+                <a href="https://maps.app.goo.gl/mVHw3r2QY6EJUzHSA" target="_blank" class="flex flex-col font-light text-sm leading-relaxed hover:text-brand-gold transition-colors">
+                    <span>Immeuble Kourchid Centre, 1er étage,</span>
+                    <span>Bureau N°3, Place de la Liberté,</span>
+                    <span>4100 Médenine</span>
+                    <span class="text-xs text-brand-gold mt-1 underline opacity-0 group-hover:opacity-100 transition-opacity">Voir sur Google Maps</span>
+                </a>
+            </div>
+
+            <div class="flex gap-4 mt-4">
+                <a href="https://www.facebook.com/profile.php?id=61574279796587" target="_blank" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-all">
+                    <span class="icon-[fa7-brands--facebook] text-xl"></span>
+                </a>
+                <a href="https://www.instagram.com/dr.riadh.rjili/" target="_blank" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-all">
+                    <span class="icon-[fa7-brands--instagram] text-xl"></span>
+                </a>
+                <a href="https://www.tiktok.com/&#64;riadh.rjili" target="_blank" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-all">
+                    <span class="icon-[fa7-brands--tiktok] text-xl"></span>
+                </a>
             </div>
         </div>
 
-        <div class="text-white flex flex-col decoration-0 flex-1 items-center">
-            <div class="flex flex-col h-full gap-2">
-                <span class="text-3xl">menu</span>
-                <a class="text-white hover:underline mt-2" routerLink="/">Accueil</a>
-                <a class="text-white hover:underline" routerLink="/treatment">Nos traitements</a>
-                <a class="text-white hover:underline" routerLink="/gallery">Gallerie</a>
-                <a class="text-white hover:underline" routerLink="/freq">Questions fréquentes</a>
-                <a class="text-white hover:underline" routerLink="/contact">Contact</a>
+        <!-- Liens Rapides -->
+        <div class="text-white flex flex-col flex-1 min-w-[200px]">
+            <h3 class="text-2xl font-heading font-semibold text-brand-gold mb-6">Liens Utiles</h3>
+            <div class="flex flex-col gap-3 font-light">
+                <a class="hover:text-brand-gold transition-colors flex items-center gap-2" routerLink="/"><span class="w-1 h-1 bg-brand-gold rounded-full"></span>Accueil</a>
+                <a class="hover:text-brand-gold transition-colors flex items-center gap-2" routerLink="/treatment"><span class="w-1 h-1 bg-brand-gold rounded-full"></span>Nos traitements</a>
+                <a class="hover:text-brand-gold transition-colors flex items-center gap-2" routerLink="/gallery"><span class="w-1 h-1 bg-brand-gold rounded-full"></span>Galerie</a>
+                <a class="hover:text-brand-gold transition-colors flex items-center gap-2" routerLink="/qsts"><span class="w-1 h-1 bg-brand-gold rounded-full"></span>Questions fréquentes</a>
+                <a class="hover:text-brand-gold transition-colors flex items-center gap-2" routerLink="/contact"><span class="w-1 h-1 bg-brand-gold rounded-full"></span>Contact</a>
             </div>
         </div>
-        <div class="text-white flex flex-col decoration-0 flex-1 gap-1">
-            <span class="text-3xl">horaires</span>
-            <span class="mt-2">Lundi ....................... 08h - 13h / 15h - 18h</span>
-            <span>Mardi ...................... 08h - 13h / 15h - 18h</span>
-            <span>Mercredi ................ 08h - 13h / 15h - 18h</span>
-            <span>Jeudi ........................ 08h - 13h / 15h - 18h</span>
-            <span>Vendredi ................ 08h - 13h / 15h - 18h</span>
-            <span>Samedi ................... 08h - 14h</span>
-            <span>Dimanche ............. fermé</span>
+
+        <!-- Horaires d'ouverture -->
+        <div class="text-white flex flex-col flex-1 min-w-[250px]">
+            <h3 class="text-2xl font-heading font-semibold text-brand-gold mb-6">Horaires</h3>
+            <ul class="flex flex-col gap-3 font-light text-sm w-full max-w-xs">
+                <li class="flex justify-between border-b border-white/10 pb-2">
+                    <span class="text-gray-300">Lundi</span>
+                    <span>08h-13h / 15h-18h</span>
+                </li>
+                <li class="flex justify-between border-b border-white/10 pb-2">
+                    <span class="text-gray-300">Mardi</span>
+                    <span>08h-13h / 15h-18h</span>
+                </li>
+                <li class="flex justify-between border-b border-white/10 pb-2">
+                    <span class="text-gray-300">Mercredi</span>
+                    <span>08h-13h / 15h-18h</span>
+                </li>
+                <li class="flex justify-between border-b border-white/10 pb-2">
+                    <span class="text-gray-300">Jeudi</span>
+                    <span>08h-13h / 15h-18h</span>
+                </li>
+                <li class="flex justify-between border-b border-white/10 pb-2">
+                    <span class="text-gray-300">Vendredi</span>
+                    <span>08h-13h / 15h-18h</span>
+                </li>
+                <li class="flex justify-between border-b border-white/10 pb-2">
+                    <span class="text-gray-300">Samedi</span>
+                    <span>08h-14h</span>
+                </li>
+                <li class="flex justify-between text-brand-gold pt-1">
+                    <span>Dimanche</span>
+                    <span>Fermé</span>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

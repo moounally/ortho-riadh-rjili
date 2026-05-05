@@ -1,26 +1,34 @@
-<div class="flex w-full px-40">
-    <div class="w-1/2 px-25 justify-end"><img src="assets/accueil/teen.jpg" alt=""></div>
-    <div class="w-1/2 justify-baseline flex flex-col px-25">
-        <span>Dès l’âge de 12 ans</span>
-        <span>Traitement pour adolescents</span>
-        <span>
-            À l’adolescence, le traitement orthodontique peut être
-            la suite d’une prise en charge commencée plus tôt ou
-            bien constituer un premier traitement. À partir de 12 ans,
-            différents types d’appareils orthodontiques peuvent être
-            proposés en fonction de la situation de chaque patient.
-        </span>
-        <div>
-            <img src="assets/logos/tick.png" />
-            <span>Diagnostic personnalisé</span>
+<div class="flex flex-col md:flex-row w-full gap-12 items-center bg-white rounded-[2rem] p-8 md:p-12 shadow-xl shadow-brand-navy/5 border border-gray-100">
+    <div class="w-full md:w-1/2">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl group">
+            <img src="assets/accueil/teen.jpg" alt="Orthodontie Adolescent" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-navy/10"></div>
         </div>
-        <div>
-            <img src="assets/logos/tick.png" />
-            <span>Sélection de la meilleure solution</span>
-        </div>
-        <div>
-            <img src="assets/logos/tick.png" />
-            <span>Suivi et ajustements</span>
+    </div>
+    <div class="w-full md:w-1/2 flex flex-col justify-center">
+        <span class="text-brand-gold uppercase tracking-[0.2em] font-semibold text-sm mb-2">Dès 12 ans</span>
+        <h3 class="text-3xl md:text-4xl font-bold text-brand-navy font-heading mb-6">Confiance & Précision</h3>
+        <p class="text-gray-600 mb-8 leading-relaxed font-light text-lg">
+            L'adolescence est une période charnière. Nous proposons des traitements orthodontiques de pointe, rapides et esthétiques (dont des gouttières invisibles) pour corriger l'alignement sans impacter la vie sociale de votre ado.
+        </p>
+        
+        <ul class="space-y-4">
+            <li class="flex items-center gap-4">
+                <span class="icon-[lucide--check-circle] text-brand-gold text-2xl shrink-0"></span>
+                <span class="text-brand-navy font-medium">Diagnostic 3D personnalisé ultra-précis</span>
+            </li>
+            <li class="flex items-center gap-4">
+                <span class="icon-[lucide--check-circle] text-brand-gold text-2xl shrink-0"></span>
+                <span class="text-brand-navy font-medium">Appareils céramiques ou gouttières transparentes</span>
+            </li>
+            <li class="flex items-center gap-4">
+                <span class="icon-[lucide--check-circle] text-brand-gold text-2xl shrink-0"></span>
+                <span class="text-brand-navy font-medium">Traitements accélérés pour minimiser la durée</span>
+            </li>
+        </ul>
+        
+        <div class="mt-10">
+            <a routerLink="/contact" class="btn-primary-custom inline-flex text-sm px-8 py-4">Planifier un bilan</a>
         </div>
     </div>
 </div>

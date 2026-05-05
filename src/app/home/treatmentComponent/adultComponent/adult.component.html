@@ -1,29 +1,34 @@
-<div class="flex w-full px-40">
-    <div class="w-1/2 px-25 justify-end"><img src="assets/accueil/adulte.jpg" alt=""></div>
-    <div class="w-1/2 justify-baseline flex flex-col px-25">
-        <span>Tout âge</span>
-        <span>Orthodontie pour adultes</span>
-        <span>
-            Correction des malpositions dentaires pour un sourire esthétique
- et harmonieux 
-Réajustement après traumatisme ou correction tardive 
-d’un déséquilibre dentaire
-Utilisation de dispositifs discrets : appareils céramiques ou
- aligneurs transparents
-Examen clinique spécialisé pour déterminer les indications et
- les solutions adaptées à chaque patient. 
-        </span>
-        <div>
-            <img src="assets/logos/tick.png" />
-            <span>Alignement des dents</span>
+<div class="flex flex-col md:flex-row w-full gap-12 items-center bg-white rounded-[2rem] p-8 md:p-12 shadow-xl shadow-brand-navy/5 border border-gray-100">
+    <div class="w-full md:w-1/2">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl group">
+            <img src="assets/accueil/adulte.jpg" alt="Orthodontie Adulte" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-navy/10"></div>
         </div>
-        <div>
-            <img src="assets/logos/tick.png" />
-            <span>Correction fonctionnelle</span>
-        </div>
-        <div>
-            <img src="assets/logos/tick.png" />
-            <span>Dispositifs discrets</span>
+    </div>
+    <div class="w-full md:w-1/2 flex flex-col justify-center">
+        <span class="text-brand-gold uppercase tracking-[0.2em] font-semibold text-sm mb-2">L'Excellence sans âge</span>
+        <h3 class="text-3xl md:text-4xl font-bold text-brand-navy font-heading mb-6">Esthétique & Discrétion Absolue</h3>
+        <p class="text-gray-600 mb-8 leading-relaxed font-light text-lg">
+            Il n'est jamais trop tard pour arborer le sourire de vos rêves. Nous concevons des traitements orthodontiques sur-mesure pour adultes, en privilégiant l'alignement invisible (Invisalign) pour s'adapter parfaitement à votre vie professionnelle et sociale.
+        </p>
+        
+        <ul class="space-y-4">
+            <li class="flex items-center gap-4">
+                <span class="icon-[lucide--check-circle] text-brand-gold text-2xl shrink-0"></span>
+                <span class="text-brand-navy font-medium">Alignement esthétique et harmonisation du sourire</span>
+            </li>
+            <li class="flex items-center gap-4">
+                <span class="icon-[lucide--check-circle] text-brand-gold text-2xl shrink-0"></span>
+                <span class="text-brand-navy font-medium">Dispositifs 100% invisibles (Aligneurs transparents)</span>
+            </li>
+            <li class="flex items-center gap-4">
+                <span class="icon-[lucide--check-circle] text-brand-gold text-2xl shrink-0"></span>
+                <span class="text-brand-navy font-medium">Correction fonctionnelle pour un confort durable</span>
+            </li>
+        </ul>
+        
+        <div class="mt-10">
+            <a routerLink="/contact" class="btn-primary-custom inline-flex text-sm px-8 py-4">Demander une consultation VIP</a>
         </div>
     </div>
 </div>

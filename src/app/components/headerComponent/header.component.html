@@ -1,10 +1,37 @@
-<header class="bg-[#26b3ff] p-1 h-[10vh] flex justify-between">
-    <nav class="flex gap-4 items-center">
-        <a class="text-white decoration-0 font-bold hover:underline" routerLink="/">Accueil</a>
-        <a class="text-white decoration-0 font-bold hover:underline" routerLink="/treatment">Nos traitements</a>
-        <a class="text-white decoration-0 font-bold hover:underline" routerLink="/gallery">Gallerie</a>
-        <a class="text-white decoration-0 font-bold hover:underline" routerLink="/qsts">Questions fréquentes</a>
-        <a class="text-white decoration-0 font-bold hover:underline" routerLink="/contact">Contact</a>
+<header 
+    class="sticky top-0 z-50 flex justify-between items-center px-8 transition-all duration-500"
+    [ngClass]="isScrolled ? 'h-16 bg-white/95 backdrop-blur-md shadow-lg py-2' : 'h-24 bg-white py-4'"
+>
+    <!-- Logo -->
+    <a routerLink="/" class="flex items-center h-full transition-all duration-500">
+        <img 
+            src="assets/logos/logo001 - Copy.png" 
+            [ngClass]="isScrolled ? 'max-h-12' : 'max-h-16'"
+            class="w-auto object-contain transition-all duration-500" 
+            alt="Dr Riadh Rjili Logo"
+        >
+    </a>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex gap-10 items-center">
+        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-sm uppercase tracking-wider" routerLink="/" routerLinkActive="text-brand-gold" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
+        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-sm uppercase tracking-wider" routerLink="/treatment" routerLinkActive="text-brand-gold">Traitements</a>
+        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-sm uppercase tracking-wider" routerLink="/gallery" routerLinkActive="text-brand-gold">Galerie</a>
+        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-sm uppercase tracking-wider" routerLink="/qsts" routerLinkActive="text-brand-gold">FAQ</a>
+        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-sm uppercase tracking-wider" routerLink="/contact" routerLinkActive="text-brand-gold">Contact</a>
     </nav>
-    <img src="assets/logos/logo001 - Copy.png">
+
+    <!-- Call to Action -->
+    <div class="flex items-center gap-4">
+        <a routerLink="/contact" 
+            class="btn-primary-custom px-6 transition-all duration-500 whitespace-nowrap"
+            [ngClass]="isScrolled ? 'py-2 text-xs' : 'py-3 text-sm'"
+        >
+            Rendez-vous
+        </a>
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-brand-navy">
+            <span class="icon-[lucide--menu] text-3xl"></span>
+        </button>
+    </div>
 </header>
