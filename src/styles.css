@@ -40,4 +40,11 @@
   .btn-outline-custom {
     @apply border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white font-semibold tracking-wide py-4 px-10 rounded-full transition-all duration-300 flex items-center justify-center gap-2 uppercase text-sm shadow-sm;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
