@@ -21,17 +21,39 @@
         <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-sm uppercase tracking-wider" routerLink="/contact" routerLinkActive="text-brand-gold">Contact</a>
     </nav>
 
-    <!-- Call to Action -->
-    <div class="flex items-center gap-4">
+    <!-- Call to Action & Mobile Toggle -->
+    <div class="flex items-center gap-2 md:gap-4">
         <a routerLink="/contact" 
-            class="btn-primary-custom px-6 transition-all duration-500 whitespace-nowrap"
-            [ngClass]="isScrolled ? 'py-2 text-xs' : 'py-3 text-sm'"
+            class="btn-primary-custom px-4 md:px-6 transition-all duration-500 whitespace-nowrap"
+            [ngClass]="isScrolled ? 'py-1.5 md:py-2 text-[10px] md:text-xs' : 'py-2.5 md:py-3 text-xs md:text-sm'"
         >
-            Rendez-vous
+            RDV
         </a>
         <!-- Mobile Menu Button -->
-        <button class="md:hidden text-brand-navy">
-            <span class="icon-[lucide--menu] text-3xl"></span>
+        <button (click)="toggleMenu()" class="md:hidden text-brand-navy p-1">
+            <span [class]="isMenuOpen ? 'icon-[lucide--x]' : 'icon-[lucide--menu]'" class="text-3xl"></span>
         </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div 
+        class="fixed inset-0 bg-brand-navy z-[60] flex flex-col items-center justify-center gap-8 transition-all duration-500 md:hidden"
+        [ngClass]="isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none translate-x-full'"
+    >
+        <button (click)="closeMenu()" class="absolute top-6 right-8 text-brand-gold">
+            <span class="icon-[lucide--x] text-4xl"></span>
+        </button>
+
+        <nav class="flex flex-col items-center gap-8">
+            <a (click)="closeMenu()" routerLink="/" class="text-2xl font-bold text-white hover:text-brand-gold transition-colors">Accueil</a>
+            <a (click)="closeMenu()" routerLink="/treatment" class="text-2xl font-bold text-white hover:text-brand-gold transition-colors">Traitements</a>
+            <a (click)="closeMenu()" routerLink="/gallery" class="text-2xl font-bold text-white hover:text-brand-gold transition-colors">Galerie</a>
+            <a (click)="closeMenu()" routerLink="/qsts" class="text-2xl font-bold text-white hover:text-brand-gold transition-colors">FAQ</a>
+            <a (click)="closeMenu()" routerLink="/contact" class="text-2xl font-bold text-white hover:text-brand-gold transition-colors">Contact</a>
+        </nav>
+
+        <div class="mt-8">
+            <a (click)="closeMenu()" routerLink="/contact" class="btn-primary-custom px-10 py-4">Prendre RDV</a>
+        </div>
     </div>
 </header>
