@@ -3,26 +3,28 @@
     [ngClass]="isScrolled ? 'h-16 bg-white/95 backdrop-blur-md shadow-lg py-2' : 'h-24 bg-white py-4'"
 >
     <!-- Logo -->
-    <a routerLink="/" class="flex items-center h-full transition-all duration-500">
-        <img 
-            src="assets/logos/logo001 - Copy.png" 
-            [ngClass]="isScrolled ? 'max-h-12' : 'max-h-16'"
-            class="w-auto object-contain transition-all duration-500" 
-            alt="Dr Riadh Rjili Logo"
-        >
-    </a>
+    <div class="flex-1 flex items-center">
+        <a routerLink="/" class="flex items-center h-full transition-all duration-500">
+            <img 
+                src="assets/logos/logo001 - Copy.png" 
+                [ngClass]="isScrolled ? 'max-h-12' : 'max-h-16'"
+                class="w-auto object-contain transition-all duration-500" 
+                alt="Dr Riadh Rjili Logo"
+            >
+        </a>
+    </div>
 
     <!-- Navigation -->
-    <nav class="hidden md:flex gap-10 items-center">
-        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-sm uppercase tracking-wider" routerLink="/" routerLinkActive="text-brand-gold" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
-        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-sm uppercase tracking-wider" routerLink="/treatment" routerLinkActive="text-brand-gold">Traitements</a>
-        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-sm uppercase tracking-wider" routerLink="/gallery" routerLinkActive="text-brand-gold">Galerie</a>
-        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-sm uppercase tracking-wider" routerLink="/qsts" routerLinkActive="text-brand-gold">FAQ</a>
-        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-sm uppercase tracking-wider" routerLink="/contact" routerLinkActive="text-brand-gold">Contact</a>
+    <nav class="hidden md:flex gap-8 lg:gap-10 items-center justify-center">
+        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-[11px] lg:text-sm uppercase tracking-wider" routerLink="/" routerLinkActive="text-brand-gold" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
+        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-[11px] lg:text-sm uppercase tracking-wider" routerLink="/treatment" routerLinkActive="text-brand-gold">Traitements</a>
+        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-[11px] lg:text-sm uppercase tracking-wider" routerLink="/gallery" routerLinkActive="text-brand-gold">Galerie</a>
+        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-[11px] lg:text-sm uppercase tracking-wider" routerLink="/qsts" routerLinkActive="text-brand-gold">FAQ</a>
+        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-[11px] lg:text-sm uppercase tracking-wider" routerLink="/contact" routerLinkActive="text-brand-gold">Contact</a>
     </nav>
 
     <!-- Call to Action & Mobile Toggle -->
-    <div class="flex items-center gap-2 md:gap-4">
+    <div class="flex-1 flex items-center justify-end gap-2 md:gap-4">
         <a href="https://www.med.tn/rendez-vous/dr-riadh-rjili/227277" target="_blank" 
             class="btn-primary-custom px-4 md:px-6 transition-all duration-500 whitespace-nowrap"
             [ngClass]="isScrolled ? 'py-1.5 md:py-2 text-[10px] md:text-xs' : 'py-2.5 md:py-3 text-xs md:text-sm'"
