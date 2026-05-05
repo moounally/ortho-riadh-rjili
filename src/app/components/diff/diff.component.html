@@ -1,13 +1,13 @@
 <div class="relative w-full aspect-[4/3] md:aspect-video overflow-hidden rounded-2xl shadow-xl border border-white group">
-    <!-- Image de fond (Avant) -->
-    <img [src]="left" class="absolute inset-0 w-full h-full object-cover" alt="Avant">
+    <!-- Image de fond (Après) -->
+    <img [src]="right" class="absolute inset-0 w-full h-full object-cover" alt="Après">
     
-    <!-- Image de dessus (Après) avec découpe dynamique -->
+    <!-- Image de dessus (Avant) avec découpe dynamique -->
     <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none" [style.width.%]="sliderValue">
-        <img [src]="right" 
+        <img [src]="left" 
              class="absolute inset-0 w-full h-full object-cover max-w-none" 
              [style.width]="containerWidth + 'px'"
-             alt="Après">
+             alt="Avant">
     </div>
 
     <!-- Input invisible pour le contrôle (Tactile & Souris) -->
@@ -23,7 +23,7 @@
             <span class="icon-[ph--tooth-bold] text-white text-xl"></span>
         </div>
         <!-- Labels informatifs (Optionnel, masqués sur mobile) -->
-        <div class="absolute top-4 left-4 bg-black/50 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded-md uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Après</div>
-        <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded-md uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Avant</div>
+        <div class="absolute top-4 left-4 bg-black/50 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded-md uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Avant</div>
+        <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded-md uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Après</div>
     </div>
 </div>
