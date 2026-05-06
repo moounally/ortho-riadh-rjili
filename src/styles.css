@@ -47,4 +47,23 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  /* Reveal Animations */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* WhatsApp Floating Button */
+  .whatsapp-btn {
+    @apply fixed bottom-8 right-8 z-[100] w-14 h-14 md:w-16 md:h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300;
+  }
+  .whatsapp-badge {
+    @apply absolute -top-1 -right-1 w-5 h-5 bg-brand-gold text-white text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-white;
+  }
 }
