@@ -20,7 +20,7 @@
     <div class="relative z-20 flex flex-col items-center justify-center text-center px-4 mt-8 md:mt-16">
         <span class="text-brand-gold uppercase tracking-[0.15em] font-semibold text-[10px] md:text-sm mb-4">Cabinet d'Orthodontie — Médenine, Tunisie</span>
         <h1 class="text-3xl md:text-7xl text-white font-bold mb-6 drop-shadow-xl leading-tight">
-            Orthodontiste à Médenine<br class="hidden md:block"/> pour enfants, adolescents et adultes
+            Orthodontiste à Médenine
         </h1>
         <p class="text-base md:text-2xl text-gray-200 mb-8 md:mb-10 max-w-2xl drop-shadow-md font-light leading-relaxed">
             Dr. Riadh Rjili vous accompagne vers un sourire aligné et en bonne santé. Appareils dentaires, aligneurs transparents et Invisalign.
@@ -76,21 +76,39 @@
     </div>
 </div>
 
-<div id="stats-section" class="bg-brand-cream py-16 md:py-24">
-    <div class="max-w-6xl mx-auto px-6">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            @for (stat of stats; track stat.label) {
-                <div class="flex flex-col items-center text-center reveal-stagger">
-                    <div class="w-16 h-16 rounded-2xl bg-white shadow-lg flex items-center justify-center mb-6 border border-brand-gold/10">
-                        <span [class]="stat.icon + ' text-brand-gold text-3xl'"></span>
-                    </div>
-                    <span class="text-4xl md:text-5xl font-bold text-brand-navy mb-2 counter-number">
+<!-- Decorative Wave Separator -->
+<div class="w-full h-24 bg-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.05]">
+        <svg viewBox="0 0 1440 320" class="w-full h-full preserve-aspect-none"><path fill="#0B2545" d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    </div>
+</div>
+
+<div id="stats-section" class="bg-brand-cream py-24 md:py-36 relative overflow-hidden">
+    <!-- Floating Luxury Icons -->
+    <span class="icon-[ph--sparkle-bold] absolute top-10 right-[10%] text-brand-gold/10 text-6xl animate-pulse"></span>
+    <span class="icon-[ph--tooth-bold] absolute bottom-10 left-[5%] text-brand-gold/5 text-9xl -rotate-12"></span>
+    
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8">
+            <div *ngFor="let stat of stats" class="flex flex-col items-center text-center reveal-stagger">
+                <div class="w-20 h-20 rounded-[2rem] bg-white shadow-2xl shadow-brand-navy/5 flex items-center justify-center mb-6 border border-brand-gold/5 transform hover:scale-110 transition-transform">
+                    <span [class]="stat.icon + ' text-brand-gold text-4xl'"></span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-5xl md:text-7xl font-bold text-brand-navy mb-2 font-heading tracking-tighter">
                         {{ stat.current }}{{ stat.suffix }}
                     </span>
-                    <span class="text-xs md:text-sm text-gray-500 uppercase tracking-widest font-medium">{{ stat.label }}</span>
+                    <span class="text-[10px] md:text-xs text-brand-gold uppercase tracking-[0.3em] font-bold">{{ stat.label }}</span>
                 </div>
-            }
+            </div>
         </div>
+    </div>
+</div>
+
+<!-- Transition to Prestige -->
+<div class="w-full h-24 bg-brand-cream relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.05] rotate-180">
+        <svg viewBox="0 0 1440 320" class="w-full h-full preserve-aspect-none"><path fill="#0B2545" d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
     </div>
 </div>
 
