@@ -37,11 +37,110 @@
     </div>
 </div>
 
-<!-- Intro Section: Le Docteur -->
-<div class="max-w-7xl mx-auto px-6 py-24 md:py-32">
-    <div class="flex flex-col lg:flex-row items-center gap-16 md:gap-24">
-        <!-- Photo du Docteur -->
-        <div class="w-full lg:w-1/2 relative reveal">
+<!-- Section 1: Le Docteur de Proximité (Authentique & Humain) -->
+<div class="max-w-7xl mx-auto px-6 py-24 md:py-32 reveal">
+    <div class="flex flex-col md:flex-row gap-16 items-center">
+        <!-- Portrait Classique -->
+        <div class="flex-1 w-full md:w-5/12">
+            <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white group">
+                <img
+                  src="assets/accueil/riadh.png"
+                  alt="Dr. Riadh Rjili, votre orthodontiste à Médenine"
+                  class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000 ease-in-out"
+                  loading="eager"
+                >
+                <div class="absolute inset-0 ring-1 ring-inset ring-brand-gold/20 rounded-[2rem]"></div>
+            </div>
+        </div>
+        
+        <!-- Texte de Proximité -->
+        <div class="flex-1 w-full md:w-7/12 flex flex-col justify-center">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="icon-[ph--map-pin-bold] text-brand-gold text-2xl"></span>
+                <span class="uppercase tracking-widest text-brand-gold font-bold text-xs">Un ancrage local, une vision moderne</span>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-bold text-brand-navy mb-6 font-heading leading-tight">
+                Au service du Sud Tunisien
+            </h2>
+            
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed text-justify font-light">
+                Orthodontiste exclusif à Médenine, le <span class="font-medium text-brand-navy">Dr. Riadh Rjili</span> reçoit avec la même bienveillance les patients venant de Zarzis, Tataouine, Djerba ou Ben Guerdane. 
+                Son cabinet a été pensé comme un lieu de confiance où la proximité humaine est aussi importante que la rigueur médicale.
+            </p>
+
+            <div class="flex items-center gap-4 text-brand-navy font-bold italic">
+                <span class="w-10 h-[2px] bg-brand-gold"></span>
+                <span>Votre sourire, notre fierté régionale.</span>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+<!-- Stats Section Animée -->
+<!-- Section 1: Le Docteur de Proximité (Authentique & Humain) -->
+<div class="max-w-7xl mx-auto px-6 py-20 reveal">
+    <div class="flex flex-col md:flex-row gap-16 items-center">
+        <!-- Portrait Classique -->
+        <div class="flex-1 w-full md:w-5/12">
+            <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white group">
+                <img
+                  src="assets/accueil/riadh.png"
+                  alt="Dr. Riadh Rjili, votre orthodontiste à Médenine"
+                  class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000 ease-in-out"
+                  loading="eager"
+                >
+                <div class="absolute inset-0 ring-1 ring-inset ring-brand-gold/20 rounded-[2rem]"></div>
+            </div>
+        </div>
+        
+        <!-- Texte de Proximité -->
+        <div class="flex-1 w-full md:w-7/12 flex flex-col justify-center">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="icon-[ph--map-pin-bold] text-brand-gold text-2xl"></span>
+                <span class="uppercase tracking-widest text-brand-gold font-bold text-xs">Un ancrage local, une vision moderne</span>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-bold text-brand-navy mb-6 font-heading">
+                Au service du Sud Tunisien
+            </h2>
+            
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed text-justify font-light">
+                Orthodontiste exclusif à Médenine, le <span class="font-medium text-brand-navy">Dr. Riadh Rjili</span> reçoit avec la même bienveillance les patients venant de Zarzis, Tataouine, Djerba ou Ben Guerdane. 
+                Son cabinet a été pensé comme un lieu de confiance où la proximité humaine est aussi importante que la rigueur médicale.
+            </p>
+
+            <div class="flex items-center gap-4 text-brand-navy font-bold italic">
+                <span class="w-10 h-[2px] bg-brand-gold"></span>
+                <span>Votre sourire, notre fierté régionale.</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="stats-section" class="bg-brand-cream py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+            @for (stat of stats; track stat.label) {
+                <div class="flex flex-col items-center text-center reveal-stagger">
+                    <div class="w-16 h-16 rounded-2xl bg-white shadow-lg flex items-center justify-center mb-6 border border-brand-gold/10">
+                        <span [class]="stat.icon + ' text-brand-gold text-3xl'"></span>
+                    </div>
+                    <span class="text-4xl md:text-5xl font-bold text-brand-navy mb-2 counter-number">
+                        {{ stat.current }}{{ stat.suffix }}
+                    </span>
+                    <span class="text-xs md:text-sm text-gray-500 uppercase tracking-widest font-medium">{{ stat.label }}</span>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Section 2: Le Portrait Prestige (Expertise & Passion) -->
+<div class="max-w-7xl mx-auto px-6 py-24 md:py-32 reveal">
+    <div class="flex flex-col lg:flex-row-reverse items-center gap-16 md:gap-24">
+        <!-- Photo du Docteur Actuelle -->
+        <div class="w-full lg:w-1/2 relative">
             <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white card-3d bg-white">
                 <img src="assets/gallery/IMG_0475.jpg" alt="Dr. Riadh Rjili" class="w-full h-auto object-cover scale-105 hover:scale-100 transition-transform duration-700">
                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent p-10">
@@ -54,17 +153,14 @@
             </div>
             
             <!-- Decorative Elements -->
-            <div class="absolute -top-8 -right-8 w-24 h-24 bg-brand-gold/10 rounded-full blur-2xl animate-pulse"></div>
-            <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-brand-navy/5 rounded-[2rem] -rotate-6 flex items-center justify-center border border-brand-navy/10">
+            <div class="absolute -top-8 -left-8 w-24 h-24 bg-brand-gold/10 rounded-full blur-2xl animate-pulse"></div>
+            <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-brand-navy/5 rounded-[2rem] rotate-6 flex items-center justify-center border border-brand-navy/10">
                 <span class="icon-[ph--tooth-bold] text-brand-gold/20 text-7xl"></span>
-            </div>
-            <div class="absolute top-1/2 -right-6 w-12 h-12 bg-white rounded-xl shadow-xl flex items-center justify-center border border-gray-100 animate-bounce" style="animation-duration: 3s">
-                <span class="icon-[ph--sparkle-bold] text-brand-gold text-2xl"></span>
             </div>
         </div>
 
         <!-- Texte Présentation: L'art et la science -->
-        <div class="w-full lg:w-1/2 reveal">
+        <div class="w-full lg:w-1/2">
             <div class="inline-flex items-center gap-3 bg-brand-gold/10 px-5 py-2 rounded-full mb-8 border border-brand-gold/20">
                 <span class="icon-[ph--sparkle-bold] text-brand-gold text-lg"></span>
                 <span class="text-brand-gold uppercase tracking-[0.2em] font-bold text-[10px]">L'excellence par choix</span>
@@ -116,25 +212,6 @@
                 </div>
                 <p class="text-[11px] text-gray-400 font-medium uppercase tracking-widest italic">"Rien de grand ne s'est accompli sans passion."</p>
             </div>
-        </div>
-    </div>
-</div>
-
-<!-- Stats Section Animée -->
-<div id="stats-section" class="bg-brand-cream py-16 md:py-24">
-    <div class="max-w-6xl mx-auto px-6">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            @for (stat of stats; track stat.label) {
-                <div class="flex flex-col items-center text-center reveal-stagger">
-                    <div class="w-16 h-16 rounded-2xl bg-white shadow-lg flex items-center justify-center mb-6 border border-brand-gold/10">
-                        <span [class]="stat.icon + ' text-brand-gold text-3xl'"></span>
-                    </div>
-                    <span class="text-4xl md:text-5xl font-bold text-brand-navy mb-2 counter-number">
-                        {{ stat.current }}{{ stat.suffix }}
-                    </span>
-                    <span class="text-xs md:text-sm text-gray-500 uppercase tracking-widest font-medium">{{ stat.label }}</span>
-                </div>
-            }
         </div>
     </div>
 </div>
