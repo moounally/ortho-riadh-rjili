@@ -1,51 +1,62 @@
-<footer class="bg-brand-navy text-white py-12 md:py-16 border-t-8 border-brand-gold">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-12">
+<footer class="bg-brand-navy text-white py-16 md:py-24 border-t-8 border-brand-gold relative overflow-hidden">
+    <!-- Decorative background icons -->
+    <span class="icon-[ph--tooth-bold] absolute top-10 right-10 text-white/5 text-[12rem] rotate-12"></span>
+    <span class="icon-[ph--sparkle-bold] absolute bottom-0 left-0 text-white/5 text-[10rem] -rotate-12"></span>
+
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-12 md:gap-16">
             
             <!-- Logo & Title -->
-            <div class="flex flex-col items-center md:items-start gap-3">
-                <div class="flex items-center gap-3">
-                    <span class="icon-[ph--tooth-bold] text-brand-gold text-3xl md:text-4xl"></span>
-                    <span class="font-bold text-xl md:text-2xl tracking-tighter uppercase font-heading">Dr. Riadh Rjili</span>
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-brand-gold rounded-2xl flex items-center justify-center shadow-lg shadow-brand-gold/20">
+                        <span class="icon-[ph--tooth-bold] text-white text-3xl"></span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-2xl md:text-3xl tracking-tighter uppercase font-heading leading-none">Dr. Riadh Rjili</span>
+                        <span class="text-brand-gold text-[9px] md:text-[10px] tracking-[0.4em] font-bold uppercase mt-1">Orthodontie de Prestige</span>
+                    </div>
                 </div>
-                <p class="text-gray-400 text-[10px] md:text-xs tracking-[0.2em] font-light text-center md:text-left uppercase">Orthodontie Exclusive & Esthétique</p>
             </div>
 
             <!-- Quick Navigation -->
-            <nav class="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-8" aria-label="Navigation pied de page">
-                <a routerLink="/" class="text-xs md:text-sm font-medium hover:text-brand-gold transition-colors">Accueil</a>
-                <a routerLink="/traitements" class="text-xs md:text-sm font-medium hover:text-brand-gold transition-colors">Traitements</a>
-                <a routerLink="/galerie" class="text-xs md:text-sm font-medium hover:text-brand-gold transition-colors">Galerie</a>
-                <a routerLink="/conseils" class="text-xs md:text-sm font-medium hover:text-brand-gold transition-colors">Conseils</a>
-                <a routerLink="/questions-frequentes" class="text-xs md:text-sm font-medium hover:text-brand-gold transition-colors">FAQ</a>
-                <a routerLink="/contact" class="text-xs md:text-sm font-medium hover:text-brand-gold transition-colors">Contact</a>
+            <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4" aria-label="Navigation pied de page">
+                <a routerLink="/" class="text-xs md:text-sm font-semibold hover:text-brand-gold transition-colors tracking-widest uppercase">Accueil</a>
+                <a routerLink="/traitements" class="text-xs md:text-sm font-semibold hover:text-brand-gold transition-colors tracking-widest uppercase">Traitements</a>
+                <a routerLink="/galerie" class="text-xs md:text-sm font-semibold hover:text-brand-gold transition-colors tracking-widest uppercase">Galerie</a>
+                <a routerLink="/conseils" class="text-xs md:text-sm font-semibold hover:text-brand-gold transition-colors tracking-widest uppercase">Conseils</a>
+                <a routerLink="/questions-frequentes" class="text-xs md:text-sm font-semibold hover:text-brand-gold transition-colors tracking-widest uppercase">FAQ</a>
+                <a routerLink="/contact" class="text-xs md:text-sm font-semibold hover:text-brand-gold transition-colors tracking-widest uppercase">Contact</a>
             </nav>
 
             <!-- Social Links -->
-            <div class="flex gap-4">
-                <a href="https://www.facebook.com/profile.php?id=61574279796587" target="_blank" rel="noopener noreferrer" aria-label="Facebook du Dr. Riadh Rjili" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-all duration-300">
-                    <span class="icon-[fa7-brands--facebook] text-lg md:text-xl"></span>
+            <div class="flex gap-5">
+                <a href="https://www.facebook.com/profile.php?id=61574279796587" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold hover:scale-110 transition-all duration-300">
+                    <span class="icon-[fa7-brands--facebook] text-xl"></span>
                 </a>
-                <a href="https://www.instagram.com/dr.riadh.rjili/" target="_blank" rel="noopener noreferrer" aria-label="Instagram du Dr. Riadh Rjili" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-all duration-300">
-                    <span class="icon-[fa7-brands--instagram] text-lg md:text-xl"></span>
+                <a href="https://www.instagram.com/dr.riadh.rjili/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold hover:scale-110 transition-all duration-300">
+                    <span class="icon-[fa7-brands--instagram] text-xl"></span>
                 </a>
-                <a href="https://maps.google.com/?cid=03339689769344407617" target="_blank" rel="noopener noreferrer" aria-label="Fiche Google Maps du Dr. Riadh Rjili" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-all duration-300">
-                    <span class="icon-[lucide--map-pin] text-lg md:text-xl"></span>
+                <a href="https://maps.google.com/?cid=03339689769344407617" target="_blank" rel="noopener noreferrer" aria-label="Localisation" class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold hover:scale-110 transition-all duration-300">
+                    <span class="icon-[lucide--map-pin] text-xl"></span>
                 </a>
             </div>
         </div>
 
-        <div class="mt-12 md:mt-16 pt-8 border-t border-white/5">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex flex-col items-center md:items-start gap-2">
-                    <p class="text-gray-500 text-[9px] md:text-[10px] uppercase tracking-widest text-center md:text-left">&copy; 2026 Dr. Riadh Rjili. Cabinet d'Orthodontie de Prestige.</p>
-                    <p class="text-gray-600 text-[8px] md:text-[9px] uppercase tracking-[0.2em] font-light text-center md:text-left">
-                        Expertise en Orthodontie à Médenine, Zarzis, Tataouine, Ben Guerdane & Djerba.
-                    </p>
+        <div class="mt-16 md:mt-24 pt-10 border-t border-white/5">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex flex-col items-center md:items-start gap-3">
+                    <p class="text-gray-500 text-[10px] md:text-xs uppercase tracking-widest text-center md:text-left">&copy; 2026 Dr. Riadh Rjili. Cabinet d'Orthodontie Digitale.</p>
+                    <div class="flex items-center gap-3">
+                        <span class="icon-[ph--sparkle-bold] text-brand-gold text-xs"></span>
+                        <p class="text-gray-600 text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-light text-center md:text-left">
+                            Médenine • Zarzis • Tataouine • Ben Guerdane • Djerba
+                        </p>
+                    </div>
                 </div>
-                <div class="flex gap-6 text-[9px] md:text-[10px] text-gray-500 uppercase tracking-widest">
-                    <a href="#" class="hover:text-white transition-colors">Mentions Légales</a>
-                    <a href="#" class="hover:text-white transition-colors">Confidentialité</a>
+                <div class="flex gap-8 text-[10px] md:text-xs text-gray-500 uppercase tracking-[0.2em]">
+                    <a routerLink="/legal" class="hover:text-brand-gold transition-colors font-medium">Mentions Légales</a>
+                    <a routerLink="/privacy" class="hover:text-brand-gold transition-colors font-medium">Confidentialité</a>
                 </div>
             </div>
         </div>
