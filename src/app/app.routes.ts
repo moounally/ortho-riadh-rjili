@@ -18,6 +18,11 @@ export const routes: Routes = [
     title: 'Galerie Avant/Après | Cabinet Dr. Riadh Rjili Médenine'
   },
   {
+    path: 'conseils',
+    loadChildren: () => import('./conseils/conseils.routes').then(m => m.conseilsRoutes),
+    title: 'Conseils Orthodontiques | Dr. Riadh Rjili Médenine'
+  },
+  {
     path: 'questions-frequentes',
     loadChildren: () => import('./qsts/qsts.routes').then(m => m.qstsRoutes),
     title: 'Questions Fréquentes Orthodontie | Dr. Riadh Rjili Médenine'

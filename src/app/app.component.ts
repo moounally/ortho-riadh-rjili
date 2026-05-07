@@ -20,6 +20,10 @@ const PAGE_META: Record<string, { description: string; canonical: string }> = {
     description: 'Galerie de cas cliniques avant/après. Résultats orthodontiques du cabinet Dr. Riadh Rjili à Médenine, Tunisie.',
     canonical: 'https://dr-riadh-rjili.tn/galerie'
   },
+  '/conseils': {
+    description: 'Conseils orthodontiques pratiques par le Dr. Riadh Rjili de Médenine : hygiène, bague décolée, douleur, âge de consultation, contention et vidéos explicatives.',
+    canonical: 'https://dr-riadh-rjili.tn/conseils'
+  },
   '/questions-frequentes': {
     description: 'Questions fréquentes sur l\'orthodontie à Médenine : âge de consultation, durée des traitements, coût, Invisalign. Réponses du Dr. Riadh Rjili.',
     canonical: 'https://dr-riadh-rjili.tn/questions-frequentes'

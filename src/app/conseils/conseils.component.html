@@ -1,0 +1,141 @@
+<div class="bg-brand-cream min-h-screen">
+
+  <!-- Hero -->
+  <div class="relative w-full h-[40vh] md:h-[50vh] flex items-center justify-center bg-brand-navy overflow-hidden">
+    <div class="absolute inset-0 bg-[url('assets/accueil/why.jpg')] bg-cover bg-center opacity-20 scale-110"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-navy/80 via-brand-navy/60 to-brand-cream"></div>
+    <div class="relative z-10 text-center px-6">
+      <div class="inline-flex items-center gap-3 bg-brand-gold/10 backdrop-blur-md px-5 py-2 rounded-full border border-brand-gold/20 mb-6">
+        <span class="icon-[ph--article-bold] text-brand-gold"></span>
+        <span class="text-brand-gold uppercase tracking-[0.3em] font-bold text-[10px]">Informations pratiques</span>
+      </div>
+      <h1 class="text-4xl md:text-7xl font-bold text-white font-heading mb-4 drop-shadow-2xl">
+        Conseils & Vidéos
+      </h1>
+      <p class="text-gray-300 text-sm md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+        Réponses pratiques aux questions les plus courantes, par le Dr. Riadh Rjili.
+      </p>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 -mt-8 md:-mt-16 relative z-20 pb-32">
+
+    <!-- ─── Section Vidéos ──────────────────────────────────────────── -->
+    <div class="mb-24 reveal">
+      <div class="text-center mb-12">
+        <span class="inline-block bg-brand-gold/10 text-brand-gold uppercase tracking-widest text-xs font-bold px-4 py-2 rounded-full mb-4">Vidéos du cabinet</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-navy font-heading">Le Dr. Riadh Rjili vous explique</h2>
+        <p class="text-gray-500 font-light mt-3 max-w-xl mx-auto text-sm">
+          Des vidéos courtes et claires pour mieux comprendre votre traitement et préparer vos questions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        @for (video of videos; track video.title) {
+          <div class="group bg-white rounded-[2rem] overflow-hidden shadow-xl shadow-brand-navy/5 border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+
+            <!-- Thumbnail / Player -->
+            <div class="relative w-full aspect-video bg-brand-navy overflow-hidden">
+              @if (video.youtubeId) {
+                <iframe
+                  [src]="'https://www.youtube.com/embed/' + video.youtubeId + '?rel=0'"
+                  class="w-full h-full"
+                  title="{{ video.title }}"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              } @else {
+                <!-- Placeholder vidéo à venir -->
+                <img [src]="video.thumbnail" [alt]="video.title" class="w-full h-full object-cover opacity-50 group-hover:opacity-60 transition-opacity" loading="lazy">
+                <div class="absolute inset-0 flex flex-col items-center justify-center gap-3">
+                  <div class="w-16 h-16 rounded-full bg-brand-gold/90 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                    <span class="icon-[ph--play-fill] text-white text-2xl ml-1"></span>
+                  </div>
+                  <span class="text-white/80 text-xs font-medium bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm">Vidéo bientôt disponible</span>
+                </div>
+              }
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-brand-navy font-bold text-base mb-2 leading-snug">{{ video.title }}</h3>
+              <p class="text-gray-500 text-sm font-light leading-relaxed">{{ video.description }}</p>
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- Note YouTube -->
+      <div class="mt-8 text-center">
+        <p class="text-gray-400 text-xs font-light">
+          Des questions après avoir regardé ? 
+          <a href="https://wa.me/21655580320?text=Bonjour%20Dr%20Rjili%2C%20j%27ai%20une%20question%20suite%20%C3%A0%20une%20vid%C3%A9o%20de%20conseils." target="_blank" rel="noopener noreferrer" class="text-brand-gold font-semibold hover:underline">Posez-les sur WhatsApp →</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── Section Articles ─────────────────────────────────────────── -->
+    <div class="reveal">
+      <div class="text-center mb-12">
+        <span class="inline-block bg-brand-gold/10 text-brand-gold uppercase tracking-widest text-xs font-bold px-4 py-2 rounded-full mb-4">Articles pratiques</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-navy font-heading">Ce que vous devez savoir</h2>
+        <p class="text-gray-500 font-light mt-3 max-w-xl mx-auto text-sm">
+          Des informations claires, sans jargon médical, pour vous aider à vivre sereinement votre traitement.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        @for (conseil of conseils; track conseil.slug) {
+          <article class="group bg-white rounded-[2rem] p-8 shadow-lg shadow-brand-navy/5 border border-gray-100 hover:border-brand-gold/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-400 flex flex-col">
+
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-12 h-12 rounded-2xl bg-brand-gold/10 flex items-center justify-center shrink-0 group-hover:bg-brand-gold group-hover:shadow-lg group-hover:shadow-brand-gold/20 transition-all duration-300">
+                <span [class]="conseil.icon + ' text-brand-gold text-2xl group-hover:text-white transition-colors'"></span>
+              </div>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-brand-gold bg-brand-gold/10 px-3 py-1 rounded-full">{{ conseil.tag }}</span>
+            </div>
+
+            <h3 class="text-brand-navy font-bold text-lg mb-3 leading-snug font-heading">{{ conseil.title }}</h3>
+            <p class="text-gray-500 text-sm font-semibold mb-4 italic">{{ conseil.excerpt }}</p>
+            <p class="text-gray-600 text-sm font-light leading-relaxed flex-grow">{{ conseil.content }}</p>
+
+            <div class="mt-6 pt-5 border-t border-gray-50">
+              <a routerLink="/contact" class="inline-flex items-center gap-2 text-brand-gold text-xs font-bold uppercase tracking-wider hover:gap-4 transition-all">
+                Une question ? <span class="icon-[ph--arrow-right-bold]"></span>
+              </a>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+
+    <!-- ─── CTA Final ─────────────────────────────────────────────────── -->
+    <div class="mt-24 reveal">
+      <div class="bg-brand-navy rounded-[2.5rem] p-10 md:p-16 text-center relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/5 rounded-full -mr-32 -mt-32"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-gold/5 rounded-full -ml-32 -mb-32"></div>
+        <div class="relative z-10">
+          <span class="icon-[ph--tooth-bold] text-brand-gold text-4xl mb-4 block"></span>
+          <h2 class="text-3xl md:text-4xl font-bold text-white font-heading mb-4">Vous avez une question spécifique ?</h2>
+          <p class="text-gray-300 font-light mb-8 max-w-lg mx-auto text-sm md:text-base">
+            Chaque cas est différent. Contactez le cabinet pour un avis personnalisé du Dr. Riadh Rjili.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a routerLink="/contact" class="btn-primary-custom px-10 py-4 shadow-2xl shadow-brand-gold/20">
+              <span class="icon-[ph--calendar-check-bold] text-xl"></span>
+              Prendre rendez-vous
+            </a>
+            <a href="https://wa.me/21655580320?text=Bonjour%20Dr%20Riadh%20Rjili%2C%20j%27ai%20lu%20vos%20conseils%20et%20j%27ai%20une%20question%20sp%C3%A9cifique." target="_blank" rel="noopener noreferrer" class="btn-outline-custom border-white/20 text-white hover:bg-white hover:text-brand-navy px-10 py-4">
+              <span class="icon-[fa7-brands--whatsapp] text-xl"></span>
+              Poser ma question
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<contact-barre-component></contact-barre-component>
