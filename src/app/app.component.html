@@ -1,24 +1,27 @@
-<div class="flex flex-col">
-  <div class="flex-1">
-    <app-header></app-header>
-  </div>
-  <div class="flex-auto h-[85vh] overflow-hidden">
-    <div class="h-full overflow-y-auto">
-      <router-outlet />
-    </div>
-  </div>
-  <div class="flex-1">
-    <app-footer></app-footer>
-  </div>
+<div class="flex flex-col min-h-screen">
+  <app-header></app-header>
 
-  <!-- WhatsApp Floating -->
-  <a href="https://wa.me/21655580320" target="_blank" class="whatsapp-btn group">
-    <span class="icon-[fa7-brands--whatsapp] text-3xl md:text-4xl"></span>
-    <span class="whatsapp-badge">1</span>
-    <div class="absolute right-full mr-4 bg-white text-brand-navy text-xs font-bold px-4 py-2 rounded-xl shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all pointer-events-none">
-      Une question ? Discutons !
-    </div>
-  </a>
+  <main class="flex-1">
+    <router-outlet />
+  </main>
 
-  <app-quiz></app-quiz>
+  <app-footer></app-footer>
 </div>
+
+<!-- WhatsApp Floating Button -->
+<a
+  href="https://wa.me/21655580320?text=Bonjour%20Dr%20Riadh%20Rjili%2C%20je%20souhaite%20avoir%20des%20informations%20pour%20une%20consultation%20orthodontique."
+  target="_blank"
+  rel="noopener noreferrer"
+  class="whatsapp-btn group"
+  aria-label="Contacter le Dr. Riadh Rjili sur WhatsApp"
+  (click)="trackWhatsApp()"
+>
+  <span class="icon-[fa7-brands--whatsapp] text-3xl md:text-4xl"></span>
+  <span class="whatsapp-badge">1</span>
+  <div class="absolute right-full mr-4 bg-white text-brand-navy text-xs font-bold px-4 py-2 rounded-xl shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all pointer-events-none">
+    Une question ? Écrivez-nous !
+  </div>
+</a>
+
+<app-quiz></app-quiz>

@@ -25,36 +25,36 @@
                     </p>
                 </div>
 
-                <form class="flex flex-col gap-8" (ngSubmit)="onSubmit()">
+                <form class="flex flex-col gap-8" (ngSubmit)="onSubmit()" #contactForm="ngForm">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div class="relative group">
-                            <input type="text" id="nom" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Nom" required>
+                            <input type="text" id="nom" [(ngModel)]="nom" name="nom" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Nom" required>
                             <label for="nom" class="absolute left-0 -top-4 text-xs text-gray-400 uppercase tracking-wider transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold">Nom</label>
                         </div>
                         <div class="relative group">
-                            <input type="text" id="prenom" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Prénom" required>
+                            <input type="text" id="prenom" [(ngModel)]="prenom" name="prenom" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Prénom" required>
                             <label for="prenom" class="absolute left-0 -top-4 text-xs text-gray-400 uppercase tracking-wider transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold">Prénom</label>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div class="relative group">
-                            <input type="tel" id="tel" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Téléphone" required>
+                            <input type="tel" id="tel" [(ngModel)]="tel" name="tel" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Téléphone" required>
                             <label for="tel" class="absolute left-0 -top-4 text-xs text-gray-400 uppercase tracking-wider transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold">Téléphone</label>
                         </div>
                         <div class="relative group">
-                            <input type="email" id="email" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Email (Optionnel)">
+                            <input type="email" id="email" [(ngModel)]="email" name="email" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Email (Optionnel)">
                             <label for="email" class="absolute left-0 -top-4 text-xs text-gray-400 uppercase tracking-wider transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold">Email (Optionnel)</label>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div class="relative group">
-                            <input type="date" id="date" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Date souhaitée">
-                            <label for="date" class="absolute left-0 -top-4 text-xs text-gray-400 uppercase tracking-wider transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold">Date souhaitée</label>
+                            <input type="date" id="date" [(ngModel)]="date" name="date" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Date souhaitée">
+                            <label for="date" class="absolute left-0 -top-4 text-xs text-gray-400 uppercase tracking-wider">Date souhaitée</label>
                         </div>
                         <div class="relative group">
-                            <select id="periode" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer">
+                            <select id="periode" [(ngModel)]="periode" name="periode" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer">
                                 <option value="" disabled selected>Choisissez une période</option>
                                 <option value="matin">Matin (08:00 - 12:00)</option>
                                 <option value="apresmidi">Après-midi (14:00 - 18:00)</option>
@@ -64,14 +64,20 @@
                     </div>
 
                     <div class="relative group">
-                        <textarea id="message" rows="3" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Votre message"></textarea>
+                        <textarea id="message" rows="3" [(ngModel)]="message" name="message" class="w-full bg-gray-50 border-0 border-b-2 border-gray-200 py-4 px-0 text-brand-navy focus:ring-0 focus:border-brand-gold transition-all peer placeholder-transparent" placeholder="Votre message"></textarea>
                         <label for="message" class="absolute left-0 -top-4 text-xs text-gray-400 uppercase tracking-wider transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold">Votre message ou motif de consultation</label>
                     </div>
 
-                    <button class="btn-primary-custom w-full md:w-auto py-4 md:py-5 px-8 md:px-12 flex items-center justify-center gap-3 text-xs md:text-lg" type="submit">
-                        <span class="icon-[lucide--send]"></span>
-                        Envoyer ma demande
-                    </button>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="btn-primary-custom w-full md:w-auto py-4 md:py-5 px-8 md:px-12 flex items-center justify-center gap-3 text-xs md:text-lg" type="submit">
+                            <span class="icon-[fa7-brands--whatsapp] text-lg md:text-xl"></span>
+                            Envoyer via WhatsApp
+                        </button>
+                        <a href="tel:+21675603294" class="btn-outline-custom w-full md:w-auto py-4 md:py-5 px-8 md:px-12 flex items-center justify-center gap-3 text-xs md:text-lg">
+                            <span class="icon-[lucide--phone]"></span>
+                            Appeler directement
+                        </a>
+                    </div>
                 </form>
             </div>
 

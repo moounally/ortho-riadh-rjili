@@ -27,8 +27,8 @@ import { CommonModule } from '@angular/common';
             <h3 class="text-2xl md:text-3xl font-bold text-brand-navy mb-4">Pour qui est ce traitement ?</h3>
             <p class="text-gray-500 mb-8 font-light">L'orthodontie s'adapte à chaque étape de la vie.</p>
             <div class="grid gap-4">
-              <button (click)="next('Enfant / Adolescent')" class="quiz-option">Enfant ou Adolescent</button>
-              <button (click)="next('Adulte')" class="quiz-option">Adulte</button>
+              <button (click)="next('Enfant / Adolescent')" class="w-full text-left p-5 rounded-2xl border-2 border-gray-100 hover:border-brand-gold hover:bg-brand-cream text-brand-navy font-semibold transition-all duration-300">Enfant ou Adolescent</button>
+              <button (click)="next('Adulte')" class="w-full text-left p-5 rounded-2xl border-2 border-gray-100 hover:border-brand-gold hover:bg-brand-cream text-brand-navy font-semibold transition-all duration-300">Adulte</button>
             </div>
           </div>
 
@@ -37,9 +37,9 @@ import { CommonModule } from '@angular/common';
             <h3 class="text-2xl md:text-3xl font-bold text-brand-navy mb-4">Quel est votre objectif ?</h3>
             <p class="text-gray-500 mb-8 font-light">Dites-nous ce que vous aimeriez corriger.</p>
             <div class="grid gap-4">
-              <button (click)="next('Alignement')" class="quiz-option">Aligner mes dents</button>
-              <button (click)="next('Espace')" class="quiz-option">Fermer des espaces</button>
-              <button (click)="next('Esthétique')" class="quiz-option">Sourire plus harmonieux</button>
+              <button (click)="next('Alignement')" class="w-full text-left p-5 rounded-2xl border-2 border-gray-100 hover:border-brand-gold hover:bg-brand-cream text-brand-navy font-semibold transition-all duration-300">Aligner mes dents</button>
+              <button (click)="next('Espace')" class="w-full text-left p-5 rounded-2xl border-2 border-gray-100 hover:border-brand-gold hover:bg-brand-cream text-brand-navy font-semibold transition-all duration-300">Fermer des espaces</button>
+              <button (click)="next('Esthétique')" class="w-full text-left p-5 rounded-2xl border-2 border-gray-100 hover:border-brand-gold hover:bg-brand-cream text-brand-navy font-semibold transition-all duration-300">Sourire plus harmonieux</button>
             </div>
           </div>
 
@@ -68,11 +68,7 @@ import { CommonModule } from '@angular/common';
       <span class="text-xs font-bold uppercase tracking-widest">Simulateur</span>
     </button>
   `,
-  styles: [`
-    .quiz-option {
-      @apply w-full text-left p-5 rounded-2xl border-2 border-gray-100 hover:border-brand-gold hover:bg-brand-cream text-brand-navy font-semibold transition-all duration-300;
-    }
-  `]
+  styles: []
 })
 export class QuizComponent {
   isOpen = false;

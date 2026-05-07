@@ -12,21 +12,24 @@
             </div>
 
             <!-- Quick Navigation -->
-            <nav class="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-8">
+            <nav class="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-8" aria-label="Navigation pied de page">
                 <a routerLink="/" class="text-xs md:text-sm font-medium hover:text-brand-gold transition-colors">Accueil</a>
-                <a routerLink="/treatment" class="text-xs md:text-sm font-medium hover:text-brand-gold transition-colors">Traitements</a>
-                <a routerLink="/gallery" class="text-xs md:text-sm font-medium hover:text-brand-gold transition-colors">Galerie</a>
-                <a routerLink="/qsts" class="text-xs md:text-sm font-medium hover:text-brand-gold transition-colors">FAQ</a>
+                <a routerLink="/traitements" class="text-xs md:text-sm font-medium hover:text-brand-gold transition-colors">Traitements</a>
+                <a routerLink="/galerie" class="text-xs md:text-sm font-medium hover:text-brand-gold transition-colors">Galerie</a>
+                <a routerLink="/questions-frequentes" class="text-xs md:text-sm font-medium hover:text-brand-gold transition-colors">FAQ</a>
                 <a routerLink="/contact" class="text-xs md:text-sm font-medium hover:text-brand-gold transition-colors">Contact</a>
             </nav>
 
             <!-- Social Links -->
             <div class="flex gap-4">
-                <a href="https://www.facebook.com/profile.php?id=61574279796587" target="_blank" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-all duration-300">
+                <a href="https://www.facebook.com/profile.php?id=61574279796587" target="_blank" rel="noopener noreferrer" aria-label="Facebook du Dr. Riadh Rjili" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-all duration-300">
                     <span class="icon-[fa7-brands--facebook] text-lg md:text-xl"></span>
                 </a>
-                <a href="https://www.instagram.com/dr.riadh.rjili/" target="_blank" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-all duration-300">
+                <a href="https://www.instagram.com/dr.riadh.rjili/" target="_blank" rel="noopener noreferrer" aria-label="Instagram du Dr. Riadh Rjili" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-all duration-300">
                     <span class="icon-[fa7-brands--instagram] text-lg md:text-xl"></span>
+                </a>
+                <a href="https://maps.google.com/?cid=03339689769344407617" target="_blank" rel="noopener noreferrer" aria-label="Fiche Google Maps du Dr. Riadh Rjili" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-all duration-300">
+                    <span class="icon-[lucide--map-pin] text-lg md:text-xl"></span>
                 </a>
             </div>
         </div>

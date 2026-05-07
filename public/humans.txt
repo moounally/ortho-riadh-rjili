@@ -1,0 +1,14 @@
+/* TEAM */
+Doctor: Dr. Riadh Rjili
+Title: Orthodontiste Exclusif
+Location: Médenine, Tunisie
+Email: rjiliorthodontics@gmail.com
+Site: https://dr-riadh-rjili.tn/
+
+/* SITE */
+Last update: 2026/05/07
+Standards: HTML5, CSS3, Angular 19
+Components: TailwindCSS 4, FlyonUI
+Hosted: Vercel
+Language: French (fr-TN)
+Doctype: HTML5

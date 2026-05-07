@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
 
+# Ressources utiles
 Sitemap: https://dr-riadh-rjili.tn/sitemap.xml
+
+# Bloquer les routes techniques Angular
+Disallow: /assets/gallerie11/
+Disallow: /*.json$
+
+# Ne pas crawler les ressources lourdes inutilement
+Disallow: /assets/videos/

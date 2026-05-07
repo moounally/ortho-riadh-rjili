@@ -15,11 +15,11 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="hidden md:flex gap-8 lg:gap-10 items-center justify-center">
+    <nav class="hidden md:flex gap-8 lg:gap-10 items-center justify-center" aria-label="Navigation principale">
         <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-[11px] lg:text-sm uppercase tracking-wider" routerLink="/" routerLinkActive="text-brand-gold" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
-        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-[11px] lg:text-sm uppercase tracking-wider" routerLink="/treatment" routerLinkActive="text-brand-gold">Traitements</a>
-        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-[11px] lg:text-sm uppercase tracking-wider" routerLink="/gallery" routerLinkActive="text-brand-gold">Galerie</a>
-        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-[11px] lg:text-sm uppercase tracking-wider" routerLink="/qsts" routerLinkActive="text-brand-gold">FAQ</a>
+        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-[11px] lg:text-sm uppercase tracking-wider" routerLink="/traitements" routerLinkActive="text-brand-gold">Traitements</a>
+        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-[11px] lg:text-sm uppercase tracking-wider" routerLink="/galerie" routerLinkActive="text-brand-gold">Galerie</a>
+        <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-[11px] lg:text-sm uppercase tracking-wider" routerLink="/questions-frequentes" routerLinkActive="text-brand-gold">FAQ</a>
         <a class="text-brand-navy font-semibold hover:text-brand-gold transition-colors text-[11px] lg:text-sm uppercase tracking-wider" routerLink="/contact" routerLinkActive="text-brand-gold">Contact</a>
     </nav>
 
@@ -46,11 +46,11 @@
             <span class="icon-[lucide--x] text-4xl"></span>
         </button>
 
-        <nav class="flex flex-col items-center gap-8">
+        <nav class="flex flex-col items-center gap-8" aria-label="Navigation mobile">
             <a (click)="closeMenu()" routerLink="/" class="text-2xl font-bold text-white hover:text-brand-gold transition-colors">Accueil</a>
-            <a (click)="closeMenu()" routerLink="/treatment" class="text-2xl font-bold text-white hover:text-brand-gold transition-colors">Traitements</a>
-            <a (click)="closeMenu()" routerLink="/gallery" class="text-2xl font-bold text-white hover:text-brand-gold transition-colors">Galerie</a>
-            <a (click)="closeMenu()" routerLink="/qsts" class="text-2xl font-bold text-white hover:text-brand-gold transition-colors">FAQ</a>
+            <a (click)="closeMenu()" routerLink="/traitements" class="text-2xl font-bold text-white hover:text-brand-gold transition-colors">Traitements</a>
+            <a (click)="closeMenu()" routerLink="/galerie" class="text-2xl font-bold text-white hover:text-brand-gold transition-colors">Galerie</a>
+            <a (click)="closeMenu()" routerLink="/questions-frequentes" class="text-2xl font-bold text-white hover:text-brand-gold transition-colors">FAQ</a>
             <a (click)="closeMenu()" routerLink="/contact" class="text-2xl font-bold text-white hover:text-brand-gold transition-colors">Contact</a>
         </nav>
 

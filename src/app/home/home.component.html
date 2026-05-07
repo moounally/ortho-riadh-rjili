@@ -1,7 +1,16 @@
 <div class="relative w-full h-[85vh] overflow-hidden flex items-center justify-center bg-black">
-    <!-- Video -->
-    <video #video class="absolute inset-0 w-full h-full object-cover opacity-70" autoplay muted loop playsinline>
-        <source src="assets/videos/Video_Riadh.mp4" type="video/mp4" />
+    <!-- Vidéo de fond - Optimisée performance -->
+    <video
+      #video
+      class="absolute inset-0 w-full h-full object-cover opacity-70"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      aria-hidden="true"
+    >
+      <source src="assets/videos/Video_Riadh.mp4" type="video/mp4" />
     </video>
     
     <!-- Dark Gradient Overlay for Luxury feel -->
@@ -9,20 +18,20 @@
 
     <!-- Hero Content -->
     <div class="relative z-20 flex flex-col items-center justify-center text-center px-4 mt-8 md:mt-16">
-        <span class="text-brand-gold uppercase tracking-[0.15em] font-semibold text-[10px] md:text-sm mb-4">Orthodontie Exclusive & Esthétique</span>
+        <span class="text-brand-gold uppercase tracking-[0.15em] font-semibold text-[10px] md:text-sm mb-4">Cabinet d'Orthodontie — Médenine, Tunisie</span>
         <h1 class="text-3xl md:text-7xl text-white font-bold mb-6 drop-shadow-xl leading-tight">
-            L'Excellence d'un <br class="hidden md:block"/>Sourire Sur-Mesure
+            Orthodontiste à Médenine<br class="hidden md:block"/> pour enfants, adolescents et adultes
         </h1>
         <p class="text-base md:text-2xl text-gray-200 mb-8 md:mb-10 max-w-2xl drop-shadow-md font-light leading-relaxed">
-            Offrez-vous le sourire que vous méritez. Des traitements invisibles et personnalisés par le Dr. Riadh Rjili.
+            Dr. Riadh Rjili vous accompagne vers un sourire aligné et en bonne santé. Appareils dentaires, aligneurs transparents et Invisalign.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto">
-            <a href="https://www.med.tn/rendez-vous/dr-riadh-rjili/227277" target="_blank" class="btn-primary-custom text-xs md:text-base px-6 md:px-10 py-3 md:py-5">
+            <a href="https://www.med.tn/rendez-vous/dr-riadh-rjili/227277" target="_blank" rel="noopener noreferrer" class="btn-primary-custom text-xs md:text-base px-6 md:px-10 py-3 md:py-5">
                 <span class="icon-[ph--calendar-check-bold] text-lg md:text-2xl"></span>
                 Réserver sur Med.tn
             </a>
-            <a routerLink="/treatment" class="btn-outline-custom text-xs md:text-base px-6 md:px-10 py-3 md:py-5 text-white border-white hover:bg-white hover:text-brand-navy">
-                Traitements
+            <a routerLink="/traitements" class="btn-outline-custom text-xs md:text-base px-6 md:px-10 py-3 md:py-5 text-white border-white hover:bg-white hover:text-brand-navy">
+                Voir les traitements
             </a>
         </div>
     </div>
@@ -30,10 +39,15 @@
 
 <div class="max-w-7xl mx-auto px-6 py-24 reveal">
     <div class="flex flex-col md:flex-row gap-16 items-center">
-        <!-- Image Dr Riadh -->
+        <!-- Portrait Dr Riadh Rjili -->
         <div class="flex-1 w-full md:w-5/12">
             <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white group">
-                <img src="assets/accueil/riadh.png" alt="Dr Riadh Rjili" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000 ease-in-out">
+                <img
+                  src="assets/accueil/riadh.png"
+                  alt="Dr. Riadh Rjili, orthodontiste à Médenine"
+                  class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000 ease-in-out"
+                  loading="eager"
+                >
                 <div class="absolute inset-0 ring-1 ring-inset ring-brand-gold/20 rounded-[2rem]"></div>
             </div>
         </div>
@@ -42,15 +56,15 @@
         <div class="flex-1 w-full md:w-7/12 flex flex-col justify-center">
             <div class="flex items-center gap-3 mb-2">
                 <span class="icon-[ph--tooth-bold] text-brand-gold text-3xl"></span>
-                <span class="uppercase tracking-widest text-brand-gold font-semibold text-sm">Notre Expertise</span>
+                <span class="uppercase tracking-widest text-brand-gold font-semibold text-sm">Votre Orthodontiste à Médenine</span>
             </div>
             <h2 class="text-4xl md:text-5xl font-bold text-brand-navy mb-8">
                 Dr. Riadh Rjili
             </h2>
             
             <p class="text-lg text-gray-600 mb-10 leading-relaxed text-justify font-light">
-                Le Cabinet d’Orthodontie Dr Riadh Rjili est un espace de prestige à Medenine, dédié exclusivement à l'esthétique et à la santé de votre sourire. 
-                Nous combinons l'excellence médicale aux technologies de pointe pour vous offrir des résultats parfaits, dans un confort absolu.
+                Orthodontiste exclusif à Médenine, le Dr. Riadh Rjili reçoit des patients de tout le sud Tunisien : Zarzis, Tataouine, Djerba et Ben Guerdane.
+                Son cabinet propose des traitements adaptés à chaque âge, dans une approche médicale personnalisée et un cadre soigné.
             </p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
