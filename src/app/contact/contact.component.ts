@@ -42,13 +42,14 @@ export class ContactComponent implements OnInit {
     this.isLoading = true;
     this.submitStatus = 'idle';
 
-    // Paramètres envoyés au template EmailJS
+    // Paramètres envoyés au template EmailJS (doivent correspondre aux {{...}} du template)
     const templateParams = {
-      from_name: `${this.prenom} ${this.nom}`,
-      phone: this.tel,
+      prenom: this.prenom,
+      nom: this.nom,
+      tel: this.tel,
       email: this.email || 'Non renseigné',
-      desired_date: this.date || 'Non précisée',
-      period: this.periode === 'matin' ? 'Matin (08h-12h)' : this.periode === 'apresmidi' ? 'Après-midi (14h-18h)' : 'Non précisée',
+      date: this.date || 'Non précisée',
+      periode: this.periode === 'matin' ? 'Matin (08h-12h)' : this.periode === 'apresmidi' ? 'Après-midi (14h-18h)' : 'Non précisée',
       message: this.message || 'Aucun message',
       reply_to: this.email || 'rjiliorthodontics@gmail.com',
     };
